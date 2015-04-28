@@ -1,0 +1,24 @@
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 22px;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  &.list--unstyled{
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}

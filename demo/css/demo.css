@@ -19,11 +19,11 @@
 }
 
 .bedrock-section {
-    margin-bottom: 4em;
+    margin-bottom: 5em;
 }
 
 .bedrock-subsection {
-    margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 
 .bedrock-section-title {
@@ -31,21 +31,20 @@
     color: #2A2A2A;
     margin-bottom: 0.875em;
     font-weight: 500;
+    text-align: center;
 }
 
 .bedrock-subsection-title {
-    font-size: 1.25em;
-    font-weight: 500;
     color: #4A4A4A;
     margin-bottom: 1em;
-    padding: 0.5em;
-    background-color: #F2F2F2;
+    text-align: center;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .bedrock-subsection-content {
-    padding: 2em;
-    border: 1px solid #F2F2F2;
-    border-radius: 0 0 3px 3px;
+  margin-bottom: 3em;
 }
 
 .bedrock-subsection-code {
@@ -53,5 +52,5 @@
 }
 
 .bedrock-subsection-code code {
-    padding: 0.5em 1.5em;
+    border-radius: 5px;
 }

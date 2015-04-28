@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -951,4 +952,201 @@ th {
   .container {
     max-width: 1140px;
   }
+}
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 22px;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+ul.list--unstyled,
+ol.list--unstyled {
+  margin: 0;
+  padding: 0;
+}
+ul.list--unstyled li,
+ol.list--unstyled li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 0.625em;
+  color: #aaa;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+p.lead {
+  font-size: 1.375em;
+  font-weight: 300;
+}
+
+small,
+.small {
+  font-size: 0.75rem;
+}
+
+.big {
+  font-size: 1.25rem;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+a {
+  color: #0074D9;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+a.secundary {
+  color: #2ECC40;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #005fc4;
+}
+a:active.secundary,
+a:focus.secundary,
+a:hover.secundary {
+  color: #19b72b;
+}
+
+blockquote {
+  border-left: 2px solid #aaa;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+blockquote cite {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+blockquote cite:before {
+  content: "— ";
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ededed;
+  margin: 20px 0 20px 0;
+  clear: both;
+}
+
+pre,
+code {
+  font-family: Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 2;
+  color: #DCDCDC;
+  background-color: #3F3F3F;
+  border: 1px solid #3F3F3F;
+  border-radius: 3px;
+  padding: 0.8rem 1rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+pre {
+  margin-bottom: 1rem;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1rem 0.3rem;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.text--nowrap {
+  white-space: nowrap;
+}
+
+.text--lowercase {
+  text-transform: lowercase;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--capitalize {
+  text-transform: capitalize;
 }

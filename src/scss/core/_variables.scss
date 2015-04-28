@@ -12,5 +12,35 @@ $container-width-md: 95% !default;
 $container-width-lg: 960px !default;
 $container-width-xl: 1140px !default;
 
-// Defaults
-$base-margin: 1.5rem;
+// Fonts
+$font-family-monospace: Menlo, Consolas, "Courier New", monospace !default;
+
+// Font Size
+$font-size-code: 0.875rem;
+
+// Font Weight
+$font-weight-thin: 300;
+$font-weight-bold: 700;
+
+// Line Height
+$line-height-default: 1.7;
+$line-height-code: 2;
+
+// Colors
+$color-primary: $blue;
+$color-success: $green;
+$color-code: #DCDCDC;
+$color-diff: #151515;
+
+// Backgrounds
+$background-body: #FFFFFF;
+$background-code: #3F3F3F;
+
+// Borders
+$border-code: #3F3F3F;
+
+// Animations
+$transition-time: 0.2s;
+
+// Margins
+$margin-default: 1.5rem;
