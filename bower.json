@@ -1,0 +1,28 @@
+{
+  "name": "bedrock",
+  "version": "0.0.1",
+  "authors": [
+    "Javier Carmona <javierscarmona@gmail.com>"
+  ],
+  "description": "A CSS Starter Framework",
+  "main": "/dist/**/*",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "~3.0.3",
+    "jeet": "~6.1.2"
+  },
+  "overrides": {
+    "jeet": {
+      "main": [
+        "scss/jeet/*.scss"
+      ]
+    }
+  }
+}
