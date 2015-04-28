@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Bedrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
   <link rel="stylesheet" type="text/css" href="src/css/bedrock.css" />
+  <link rel="stylesheet" type="text/css" href="demo/css/zenburn.css" />
   <link rel="stylesheet" type="text/css" href="demo/css/demo.css" />
 </head>
 <body>
@@ -11,41 +14,311 @@
     <h1>Bedrock</h1>
   </div>
 
-  <div class="container">
-    <h2>Grid</h2>
 
-    <div class="row">
-      <div class="col--1">1</div>
-      <div class="col--11">11</div>
+  <div class="bedrock-section container" id="typography">
+    <h1 class="bedrock-section-title">Grid</h1>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Default</h2>
+      <div class="bedrock-subsection-content">
+        <div class="row">
+          <div class="col--1">1</div>
+          <div class="col--11">11</div>
+        </div>
+        <div class="row">
+          <div class="col--2">2</div>
+          <div class="col--10">10</div>
+        </div>
+        <div class="row">
+          <div class="col--3">3</div>
+          <div class="col--9">9</div>
+        </div>
+        <div class="row">
+          <div class="col--4">4</div>
+          <div class="col--8">8</div>
+        </div>
+        <div class="row">
+          <div class="col--5">5</div>
+          <div class="col--7">7</div>
+        </div>
+        <div class="row">
+          <div class="col--6">6</div>
+          <div class="col--6">6</div>
+        </div>
+      </div>
+      <div class="bedrock-subsection-code">
+        <pre><code class="html" data-code>
+<div class="row">
+  <div class="col--1">1</div>
+  <div class="col--11">11</div>
+</div>
+<div class="row">
+  <div class="col--2">2</div>
+  <div class="col--10">10</div>
+</div>
+<div class="row">
+  <div class="col--3">3</div>
+  <div class="col--9">9</div>
+</div>
+<div class="row">
+  <div class="col--4">4</div>
+  <div class="col--8">8</div>
+</div>
+<div class="row">
+  <div class="col--5">5</div>
+  <div class="col--7">7</div>
+</div>
+<div class="row">
+  <div class="col--6">6</div>
+  <div class="col--6">6</div>
+</div>
+        </code></pre>
+      </div>
     </div>
-    <div class="row">
-      <div class="col--2">2</div>
-      <div class="col--10">10</div>
-    </div>
-    <div class="row">
-      <div class="col--3">3</div>
-      <div class="col--9">9</div>
-    </div>
-    <div class="row">
-      <div class="col--4">4</div>
-      <div class="col--8">8</div>
-    </div>
-    <div class="row">
-      <div class="col--5">5</div>
-      <div class="col--7">7</div>
-    </div>
-    <div class="row">
-      <div class="col--6">6</div>
-      <div class="col--6">6</div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Offset</h2>
+      <div class="bedrock-subsection-content">
+        <div class="row">
+          <div class="col--3 col--push-9">1</div>
+          <div class="col--9 col--pull-3">2</div>
+        </div>
+      </div>
+      <div class="bedrock-subsection-code">
+        <pre><code class="html" data-code>
+<div class="row">
+  <div class="col--3 col--push-9">1</div>
+  <div class="col--9 col--pull-3">2</div>
+</div>
+        </code></pre>
+      </div>
     </div>
   </div>
 
-  <div class="container">
-    <h2>Grid - Offset</h2>
-    <div class="row">
-      <div class="col--3 col--push-9">1</div>
-      <div class="col--9 col--pull-3">2</div>
+  <div class="bedrock-section container" id="typography">
+    <h1 class="bedrock-section-title">Typography</h1>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Headings</h2>
+      <div class="bedrock-subsection-content">
+        <h1>Heading 1 <small>Sub Heading</small><br>Heading 1 <small>Sub Heading</small></h1>
+        <h2>Heading 2 <small>Sub Heading</small><br>Heading 2 <small>Sub Heading</small></h2>
+        <h3>Heading 3 <small>Sub Heading</small><br>Heading 3 <small>Sub Heading</small></h3>
+        <h4>Heading 4 <small>Sub Heading</small><br>Heading 4 <small>Sub Heading</small></h4>
+        <h5>Heading 5 <small>Sub Heading</small><br>Heading 5 <small>Sub Heading</small></h5>
+        <h6>Heading 6 <small>Sub Heading</small><br>Heading 6 <small>Sub Heading</small></h6>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<h1>Heading 1 <small>Sub Heading</small></h1>
+<h2>Heading 2 <small>Sub Heading</small></h2>
+<h3>Heading 3 <small>Sub Heading</small></h3>
+<h4>Heading 4 <small>Sub Heading</small></h4>
+<h5>Heading 5 <small>Sub Heading</small></h5>
+<h6>Heading 6 <small>Sub Heading</small></h6>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Paragraph</h2>
+      <div class="bedrock-subsection-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<p>...</p>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Lead Paragraph</h2>
+      <div class="bedrock-subsection-content">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<p class="lead">...</p>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Marked Text</h2>
+      <div class="bedrock-subsection-content">
+        Lorem <mark>ipsum dolor</mark> sit amet, consectetur adipisicing elit.
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+Lorem <mark>ipsum dolor</mark> sit amet, consectetur adipisicing elit.
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Deleted Text</h2>
+      <div class="bedrock-subsection-content">
+        <del>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</del>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<del>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</del>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Strikethrough Text</h2>
+      <div class="bedrock-subsection-content">
+        <s>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</s>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<s>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</s>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Inserted Text</h2>
+      <div class="bedrock-subsection-content">
+        <ins>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</ins>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<ins>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</ins>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Underlined Text</h2>
+      <div class="bedrock-subsection-content">
+        <u>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</u>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<u>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</u>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Small Text</h2>
+      <div class="bedrock-subsection-content">
+        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Bold Text</h2>
+      <div class="bedrock-subsection-content">
+        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Italic Text</h2>
+      <div class="bedrock-subsection-content">
+        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Alignement Classes</h2>
+      <div class="bedrock-subsection-content">
+        <p class="text--left">Left Aligned</p>
+        <p class="text--center">Center Aligned</p>
+        <p class="text--right">Right Aligned</p>
+        <p class="text--justify">Justified</p>
+        <p class="text--nowrap">No Wrap</p>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<p class="text--left">Left Aligned</p>
+<p class="text--center">Center Aligned</p>
+<p class="text--right">Right Aligned</p>
+<p class="text--justify">Justified</p>
+<p class="text--nowrap">No Wrap</p>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Transformation Classes</h2>
+      <div class="bedrock-subsection-content">
+        <p class="text--lowercase">LOWERCASE</p>
+        <p class="text--uppercase">uppercase</p>
+        <p class="text--capitalize">capitalize</p>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<p class="text--lowercase">LOWERCASE</p>
+<p class="text--uppercase">uppercase</p>
+<p class="text--capitalize">capitalize</p>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Blockquote</h2>
+      <div class="bedrock-subsection-content">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet sed aut, ipsum maxime sapiente neque iste illum commodi laudantium alias! Molestias alias, qui non debitis numquam inventore rem neque tempore!</p>
+          <cite title="John Wayne">John Wayne</cite>
+        </blockquote>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet sed aut, ipsum maxime sapiente neque iste illum commodi laudantium alias! Molestias alias, qui non debitis numquam inventore rem neque tempore!</p>
+  <cite title="John Wayne">John Wayne</cite>
+</blockquote>
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="bedrock-subsection">
+      <h2 class="bedrock-subsection-title">Code</h2>
+      <div class="bedrock-subsection-content">
+  <pre>#header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+  }</pre>
+      </div>
+      <div class="bedrock-subsection-code">
+      <pre><code class="html" data-code>
+<pre>#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}</pre>
+      </code></pre>
+      </div>
+
     </div>
   </div>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script type="text/javascript" src="demo/js/demo.js"></script>
 </body>
 </html>
