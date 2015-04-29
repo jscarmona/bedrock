@@ -1,12 +1,9 @@
-.row {
-  margin-bottom: 1.5rem;
-}
-
 .row > [class^="col"] {
   font-size: 0.875rem;
   padding: 1.125rem 0.3125rem;
   color: #FFF;
   text-align: center;
+  margin-bottom: 1rem;
   border-radius: 4px;
 }
 
@@ -16,6 +13,10 @@
 
 .row > [class^="col"]:nth-child(odd) {
   background-color: #34495e;
+}
+
+.row:last-child > [class^="col"] {
+  margin-bottom: 0;
 }
 
 .bedrock-section {
