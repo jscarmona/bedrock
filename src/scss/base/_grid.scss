@@ -5,12 +5,36 @@
 }
 
 .container {
-  @include cf();
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {
   @include cf();
+}
+
+@for $i from 1 through $grid-columns {
+  .col--#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
+  .col--push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
+  .col--pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+}
+
+@include breakpointSmallerThan($breakpoint-sm) {
+  .container {
+    max-width: $container-width-default;
+  }
+}
+
+@include breakpointLargerThan($breakpoint-sm) {
+  .container {
+    max-width: $container-width-sm;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col--sm-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--sm-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--sm-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+  }
 }
 
 @include breakpointLargerThan($breakpoint-md) {
@@ -19,19 +43,9 @@
   }
 
   @for $i from 1 through $grid-columns {
-    .col--#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
-  }
-}
-
-@include breakpointSmallerThan($breakpoint-md) {
-  .container {
-    max-width: $container-width-md;
-  }
-
-  .row [class^="col--"]:first-child {
-    margin-bottom: $margin-default;
+    .col--md-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--md-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--md-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
   }
 }
 
@@ -39,10 +53,22 @@
   .container {
     max-width: $container-width-lg;
   }
+
+  @for $i from 1 through $grid-columns {
+    .col--lg-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--lg-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--lg-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+  }
 }
 
 @include breakpointLargerThan($breakpoint-xl) {
   .container {
     max-width: $container-width-xl;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col--xl-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--xl-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
+    .col--xl-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
   }
 }
