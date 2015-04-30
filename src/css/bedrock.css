@@ -2421,28 +2421,146 @@ th {
 }
 ul,
 ol {
-  margin-bottom: 1rem;
-  padding-left: 22px;
+  list-style-position: inside;
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
 }
+
 ul ul,
 ul ol,
-ol ul,
-ol ol {
+ol ol,
+ol ul {
+  margin: 1rem 0;
+}
+
+li {
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+dl {
+  margin: 0 0 1.5rem;
+}
+
+dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+dd {
+  margin: 0 0 1.5rem;
+}
+
+dl > dd:last-child {
   margin-bottom: 0;
 }
 
-ul.list--unstyled,
-ol.list--unstyled {
-  margin: 0;
-  padding: 0;
-}
-ul.list--unstyled li,
-ol.list--unstyled li {
+.list--unstyled {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.list--inline,
+.list--sm-inline,
+.list--md-inline,
+.list--lg-inline,
+.list--xl-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list--inline {
+  display: inline-block;
+  position: relative;
+  *zoom: 1;
+}
+.list--inline:before, .list--inline:after {
+  content: '';
+  display: table;
+}
+.list--inline:after {
+  clear: both;
+}
+.list--inline > li {
+  float: left;
+  margin: 0 1rem;
+}
+
+@media (min-width: 480px) {
+  .list--sm-inline {
+    display: inline-block;
+    position: relative;
+    *zoom: 1;
+  }
+  .list--sm-inline:before, .list--sm-inline:after {
+    content: '';
+    display: table;
+  }
+  .list--sm-inline:after {
+    clear: both;
+  }
+  .list--sm-inline > li {
+    float: left;
+    margin: 0 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .list--md-inline {
+    display: inline-block;
+    position: relative;
+    *zoom: 1;
+  }
+  .list--md-inline:before, .list--md-inline:after {
+    content: '';
+    display: table;
+  }
+  .list--md-inline:after {
+    clear: both;
+  }
+  .list--md-inline > li {
+    float: left;
+    margin: 0 1rem;
+  }
+}
+@media (min-width: 970px) {
+  .list--lg-inline {
+    display: inline-block;
+    position: relative;
+    *zoom: 1;
+  }
+  .list--lg-inline:before, .list--lg-inline:after {
+    content: '';
+    display: table;
+  }
+  .list--lg-inline:after {
+    clear: both;
+  }
+  .list--lg-inline > li {
+    float: left;
+    margin: 0 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .list--xl-inline {
+    display: inline-block;
+    position: relative;
+    *zoom: 1;
+  }
+  .list--xl-inline:before, .list--xl-inline:after {
+    content: '';
+    display: table;
+  }
+  .list--xl-inline:after {
+    clear: both;
+  }
+  .list--xl-inline > li {
+    float: left;
+    margin: 0 1rem;
+  }
+}
 h1,
 h2,
 h3,
@@ -2542,7 +2660,7 @@ kbd {
 
 a {
   color: #0074D9;
-  transition: all 0.2s;
+  transition: color 0.2s;
   text-decoration: none;
 }
 

@@ -97,7 +97,7 @@ kbd {
 
 a {
   color: $color-primary;
-  transition: all $transition-time;
+  transition: color $transition-time;
   text-decoration: none;
 }
 

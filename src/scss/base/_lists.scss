@@ -1,24 +1,106 @@
-ul,
-ol {
-  margin-bottom: 1rem;
-  padding-left: 22px;
+@mixin list--unstyled() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  ul,
-  ol {
-    margin-bottom: 0;
+@mixin list--inline() {
+  display: inline-block;
+  position: relative;
+
+  @include cf();
+
+  > li {
+    float: left;
+    margin: 0 1rem;
   }
 }
 
 ul,
 ol {
-  &.list--unstyled{
-    margin: 0;
-    padding: 0;
+  list-style-position: inside;
+  margin: $margin-default 0;
+  padding: 0 1.5rem;
+}
 
-    li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1rem 0;
+}
+
+li {
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+dl {
+  margin: 0 0 $margin-default;
+}
+
+dt {
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+dd {
+  margin: 0 0 $margin-default;
+}
+
+dl > dd:last-child {
+  margin-bottom: 0;
+}
+
+.list--unstyled {
+  @include list--unstyled();
+}
+
+.list--inline,
+.list--sm-inline,
+.list--md-inline,
+.list--lg-inline,
+.list--xl-inline {
+  @include list--unstyled();
+}
+
+.list--inline {
+  @include list--inline();
+}
+
+@include breakpointLargerThan($breakpoint-sm) {
+  .list--sm-inline {
+    @include list--inline();
   }
 }
+
+@include breakpointLargerThan($breakpoint-md) {
+  .list--md-inline {
+    @include list--inline();
+  }
+}
+
+@include breakpointLargerThan($breakpoint-lg) {
+  .list--lg-inline {
+    @include list--inline();
+  }
+}
+
+@include breakpointLargerThan($breakpoint-xl) {
+  .list--xl-inline {
+    @include list--inline();
+  }
+}
+
+// .list--inline--center {
+//   position: relative;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+
+// .list--inline--right {
+//   position: relative;
+//   left: 100%;
+//   transform: translateX(-100%);
+// }

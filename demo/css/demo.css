@@ -1,4 +1,4 @@
-.row > [class^="col"] {
+#grid .row > [class^="col"] {
   font-size: 0.875rem;
   padding: 1.125rem 0.3125rem;
   color: #FFF;
@@ -7,11 +7,11 @@
   border-radius: 4px;
 }
 
-.row > [class^="col"]:nth-child(even) {
+#grid .row > [class^="col"]:nth-child(even) {
   background-color: #2980b9;
 }
 
-.row > [class^="col"]:nth-child(odd) {
+#grid .row > [class^="col"]:nth-child(odd) {
   background-color: #34495e;
 }
 
