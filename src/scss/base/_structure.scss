@@ -1,0 +1,13 @@
+body {
+  font-family: $font-family-default;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  background-color: $background-body;
+  color: $color-default;
+  min-height: 100%;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}

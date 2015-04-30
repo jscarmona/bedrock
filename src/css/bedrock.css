@@ -409,6 +409,38 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Light.eot");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Bold.eot");
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Black.eot");
+  src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
 /*  Syntax Quick Reference
   --------------------------
   column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
@@ -2420,7 +2452,7 @@ h6 {
   line-height: 1.2;
   margin: 0;
   font-weight: 300;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   margin-bottom: 1.5rem;
 }
 
@@ -2460,7 +2492,7 @@ h6 small {
 
 p {
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 p.lead {
@@ -2487,13 +2519,31 @@ em {
   font-style: italic;
 }
 
+mark {
+  background-color: #FFDC00;
+  padding: 0 0.25em;
+}
+
+abbr,
+ins {
+  text-decoration: none;
+  border-bottom: 1px dotted #111;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+}
+
+kbd {
+  font-family: Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.875rem;
+}
+
 a {
   color: #0074D9;
   transition: all 0.2s;
   text-decoration: none;
-}
-a.secundary {
-  color: #2ECC40;
 }
 
 a:active,
@@ -2501,21 +2551,21 @@ a:focus,
 a:hover {
   color: #005fc4;
 }
-a:active.secundary,
-a:focus.secundary,
-a:hover.secundary {
-  color: #19b72b;
+
+a:active {
+  position: relative;
+  top: 1px;
 }
 
 blockquote {
-  border-left: 2px solid #aaa;
+  border-left: 5px solid #aaa;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: #aaa;
 }
 blockquote cite {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #aaa;
 }
 blockquote cite:before {
@@ -2533,10 +2583,10 @@ pre,
 code {
   font-family: Menlo, Consolas, "Courier New", monospace;
   font-size: 0.875rem;
-  line-height: 2;
-  color: #DCDCDC;
-  background-color: #3F3F3F;
-  border: 1px solid #3F3F3F;
+  line-height: 1.5;
+  color: #333;
+  background-color: #F7F7FE;
+  border: 1px solid #E1E1E1;
   border-radius: 3px;
   padding: 0.8rem 1rem;
   white-space: pre-wrap;
@@ -2551,6 +2601,16 @@ pre {
 code {
   display: inline-block;
   padding: 0.1rem 0.3rem;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #2980B9;
+}
+
+::selection {
+  color: #fff;
+  background: #2980B9;
 }
 
 .text--left {
@@ -2583,4 +2643,18 @@ code {
 
 .text--capitalize {
   text-transform: capitalize;
+}
+
+body {
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #fff;
+  color: #111;
+  min-height: 100%;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }

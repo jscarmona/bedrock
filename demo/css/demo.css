@@ -15,10 +15,6 @@
   background-color: #34495e;
 }
 
-.row:last-child > [class^="col"] {
-  margin-bottom: 0;
-}
-
 .bedrock-section {
     margin-bottom: 5em;
 }
@@ -52,6 +48,13 @@
     font-size: 0.875em;
 }
 
+.bedrock-subsection-code pre {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
 .bedrock-subsection-code code {
-    border-radius: 5px;
+  padding: 0 1.5em;
 }

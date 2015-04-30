@@ -9,38 +9,47 @@ $breakpoint-lg: 970px !default;
 $breakpoint-xl: 1200px !default;
 
 // Containers
-$container-width-default: 95% !default;
 $container-width-sm: 95% !default;
 $container-width-md: 95% !default;
 $container-width-lg: 960px !default;
 $container-width-xl: 1140px !default;
+$container-width-default: $container-width-sm;
 
 // Fonts
+$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New", serif !default;
 $font-family-monospace: Menlo, Consolas, "Courier New", monospace !default;
+$font-family-headings: $font-family-sans-serif;
+$font-family-default: $font-family-sans-serif;
 
 // Font Size
+$font-size-body: 16px;
 $font-size-code: 0.875rem;
 
 // Font Weight
 $font-weight-thin: 300;
+$font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // Line Height
 $line-height-default: 1.7;
-$line-height-code: 2;
+$line-height-code: 1.5;
 
 // Colors
 $color-primary: $blue;
 $color-success: $green;
-$color-code: #DCDCDC;
+$color-code: #333;
+$color-default: $black;
+$color-selection: $white;
 $color-diff: #151515;
 
 // Backgrounds
-$background-body: #FFFFFF;
-$background-code: #3F3F3F;
+$background-body: $white;
+$background-code: #F7F7FE;
+$background-selection: #2980B9;
 
 // Borders
-$border-code: #3F3F3F;
+$border-code: #E1E1E1;
 
 // Animations
 $transition-time: 0.2s;
