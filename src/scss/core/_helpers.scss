@@ -1,0 +1,16 @@
+.block-align--center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.block-align--left {
+  position: relative;
+  left: 0;
+}
+
+.block-align--right {
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
