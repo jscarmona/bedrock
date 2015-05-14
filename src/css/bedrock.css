@@ -2486,7 +2486,10 @@ dl > dd:last-child {
 }
 .list--inline > li {
   float: left;
-  margin: 0 1rem;
+  margin: 0 0 0 1rem;
+}
+.list--inline > li:first-child {
+  margin-left: 0;
 }
 
 @media (min-width: 480px) {
@@ -2504,7 +2507,10 @@ dl > dd:last-child {
   }
   .list--sm-inline > li {
     float: left;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
+  }
+  .list--sm-inline > li:first-child {
+    margin-left: 0;
   }
 }
 @media (min-width: 768px) {
@@ -2522,7 +2528,10 @@ dl > dd:last-child {
   }
   .list--md-inline > li {
     float: left;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
+  }
+  .list--md-inline > li:first-child {
+    margin-left: 0;
   }
 }
 @media (min-width: 970px) {
@@ -2540,7 +2549,10 @@ dl > dd:last-child {
   }
   .list--lg-inline > li {
     float: left;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
+  }
+  .list--lg-inline > li:first-child {
+    margin-left: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -2558,7 +2570,10 @@ dl > dd:last-child {
   }
   .list--xl-inline > li {
     float: left;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
+  }
+  .list--xl-inline > li:first-child {
+    margin-left: 0;
   }
 }
 h1,
