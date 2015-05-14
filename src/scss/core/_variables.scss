@@ -42,14 +42,17 @@ $color-code: #333;
 $color-default: $black;
 $color-selection: $white;
 $color-diff: #151515;
+$color-headings-small: $gray;
+$color-mark: $yellow;
 
 // Backgrounds
-$background-body: $white;
-$background-code: #F7F7FE;
-$background-selection: #2980B9;
+$background-color-body: $white;
+$background-color-code: #F7F7FE;
+$background-color-selection: #2980B9;
 
 // Borders
-$border-code: #E1E1E1;
+$border-color-code: #E1E1E1;
+$border-color-blockquote: $gray;
 
 // Animations
 $transition-time: 0.2s;

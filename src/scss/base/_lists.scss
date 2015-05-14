@@ -96,15 +96,3 @@ dl > dd:last-child {
     @include list--inline();
   }
 }
-
-// .list--inline--center {
-//   position: relative;
-//   left: 50%;
-//   transform: translateX(-50%);
-// }
-
-// .list--inline--right {
-//   position: relative;
-//   left: 100%;
-//   transform: translateX(-100%);
-// }

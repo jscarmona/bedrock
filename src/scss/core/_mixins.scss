@@ -12,25 +12,25 @@
 }
 
 @mixin breakpoint($breakpoint, $type: 'max') {
-    @media (#{$type}-width: $breakpoint) {
-        @content;
-    }
+  @media (#{$type}-width: $breakpoint) {
+    @content;
+  }
 }
 
 @mixin breakpointBetween($fromBreakpoint, $toBreakpoint) {
-    @media (min-width: $fromBreakpoint) and (max-width: $toBreakpoint - 1) {
-        @content;
-    }
+  @media (min-width: $fromBreakpoint) and (max-width: $toBreakpoint - 1) {
+    @content;
+  }
 }
 
 @mixin breakpointSmallerThan($breakpoint) {
-    @include breakpoint($breakpoint - 1, 'max') {
-        @content;
-    }
+  @include breakpoint($breakpoint - 1, 'max') {
+    @content;
+  }
 }
 
 @mixin breakpointLargerThan($breakpoint) {
-    @include breakpoint($breakpoint, 'min') {
-        @content;
-    }
+  @include breakpoint($breakpoint, 'min') {
+    @content;
+  }
 }

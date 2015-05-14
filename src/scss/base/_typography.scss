@@ -42,7 +42,7 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 0.625em;
-  color: $gray;
+  color: $color-headings-small;
 }
 
 p {
@@ -75,7 +75,7 @@ em {
 }
 
 mark {
-    background-color: $yellow;
+    background-color: $color-mark;
     padding: 0 0.25em;
 }
 
@@ -131,7 +131,7 @@ blockquote {
 
 hr {
   border: 0;
-  border-bottom: 1px solid darken($background-body, 7);
+  border-bottom: 1px solid darken($background-color-body, 7);
   margin: 20px 0 20px 0;
   clear: both;
 }
@@ -143,8 +143,8 @@ code {
   line-height: $line-height-code;
 
   color: $color-code;
-  background-color: $background-code;
-  border: 1px solid $border-code;
+  background-color: $background-color-code;
+  border: 1px solid $border-color-code;
   border-radius: 3px;
 
   padding: 0.8rem 1rem;
@@ -165,12 +165,12 @@ code {
 
 ::-moz-selection {
   color: $color-selection;
-  background: $background-selection;
+  background: $background-color-selection;
 }
 
 ::selection {
   color: $color-selection;
-  background: $background-selection;
+  background: $background-color-selection;
 }
 
 .text--left {
