@@ -3755,11 +3755,6 @@ p {
   margin: 1rem 0;
 }
 
-p.lead {
-  font-size: 1.375em;
-  font-weight: 300;
-}
-
 small,
 .small {
   font-size: 0.75rem;
@@ -3871,6 +3866,11 @@ code {
 ::selection {
   color: #fff;
   background: #2980B9;
+}
+
+.text--lead {
+  font-size: 1.375em;
+  font-weight: 300;
 }
 
 .text--left {

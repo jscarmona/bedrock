@@ -50,11 +50,6 @@ p {
   margin: 1rem 0;
 }
 
-p.lead {
-  font-size: 1.375em;
-  font-weight: $font-weight-thin;
-}
-
 small,
 .small {
   font-size: 0.75rem;
@@ -171,6 +166,11 @@ code {
 ::selection {
   color: $color-selection;
   background: $background-color-selection;
+}
+
+.text--lead {
+  font-size: 1.375em;
+  font-weight: $font-weight-thin;
 }
 
 .text--left {
