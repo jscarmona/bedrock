@@ -10,7 +10,11 @@
   margin-bottom: $margin-form-group;
 }
 
-.form__group--horizontal {
+.form__group--horizontal,
+.form__group--sm-horizontal,
+.form__group--md-horizontal,
+.form__group--lg-horizontal,
+.form__group--xl-horizontal {
   @extend .form__group;
   @include cf();
 }
@@ -64,6 +68,34 @@ textarea {
     .form__group.success & {
       border-color: $color-success;
     }
+
+    .form__group--horizontal & {
+      @include col(3/4);
+    }
+
+    @include breakpointLargerThan($breakpoint-sm) {
+      .form__group--sm-horizontal & {
+        @include col(3/4);
+      }
+    }
+
+    @include breakpointLargerThan($breakpoint-md) {
+      .form__group--md-horizontal & {
+        @include col(3/4);
+      }
+    }
+
+    @include breakpointLargerThan($breakpoint-lg) {
+      .form__group--lg-horizontal & {
+        @include col(3/4);
+      }
+    }
+
+    @include breakpointLargerThan($breakpoint-xl) {
+      .form__group--xl-horizontal & {
+        @include col(3/4);
+      }
+    }
   }
 }
 
@@ -107,6 +139,44 @@ select {
   .form__group.success & {
     color: $color-success;
     border-color: $color-success;
+  }
+
+  .form__group--horizontal & {
+    @include col(1/4);
+    text-align: right;
+    line-height: 2.625rem;
+  }
+
+  @include breakpointLargerThan($breakpoint-sm) {
+    .form__group--sm-horizontal & {
+      @include col(1/4);
+      text-align: right;
+      line-height: 2.625rem;
+    }
+  }
+
+  @include breakpointLargerThan($breakpoint-md) {
+    .form__group--md-horizontal & {
+      @include col(1/4);
+      text-align: right;
+      line-height: 2.625rem;
+    }
+  }
+
+  @include breakpointLargerThan($breakpoint-lg) {
+    .form__group--lg-horizontal & {
+      @include col(1/4);
+      text-align: right;
+      line-height: 2.625rem;
+    }
+  }
+
+  @include breakpointLargerThan($breakpoint-xl) {
+    .form__group--xl-horizontal & {
+      @include col(1/4);
+      text-align: right;
+      line-height: 2.625rem;
+    }
   }
 }
 
