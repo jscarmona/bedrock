@@ -1,0 +1,212 @@
+@mixin select() {
+  background-color: $background-color-form-control;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+
+.form__group {
+  margin-bottom: $margin-form-group;
+}
+
+.form__group--horizontal {
+  @extend .form__group;
+  @include cf();
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+  &.form__control {
+    height: 2.625rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin-bottom: $margin-form-control;
+    font-family: $font-family-form-control;
+    font-weight: $font-weight-regular;
+    color: $color-form-control;
+    font-size: 1rem;
+    border: 2px solid $border-color-default;
+    border-radius: $border-radius-form-control;
+    background-color: $background-color-form-control;
+    transition: border-color $transition-time, color $transition-time;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+
+    &:focus {
+      border-color: $border-color-form-control-focus;
+      color: $color-form-control-focus;
+      outline: none;
+    }
+
+    &.error,
+    .form__group.error & {
+      border-color: $color-error;
+    }
+
+    &.warning,
+    .form__group.warning & {
+      border-color: $color-warning;
+    }
+
+    &.success,
+    .form__group.success & {
+      border-color: $color-success;
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  &.form__control {
+    margin-right: 0.5rem;
+  }
+}
+
+textarea {
+  height: auto;
+  min-height: 6.25rem;
+  line-height: $line-height-form-control;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form__label {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+
+  &.error,
+  .form__group.error & {
+    color: $color-error;
+    border-color: $color-error;
+  }
+
+  &.warning,
+  .form__group.warning & {
+    color: $color-warning;
+    border-color: $color-warning;
+  }
+
+  &.success,
+  .form__group.success & {
+    color: $color-success;
+    border-color: $color-success;
+  }
+}
+
+.form__toggle {
+  position: relative;
+  cursor: pointer;
+  padding-left: $form-toggle-width + 6px;
+
+  .form__control {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .form__label:before,
+  .form__label:after {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all 0.25s;
+  }
+
+  .form__label:before {
+    width: $form-toggle-width;
+    height: $form-toggle-height;
+    border-radius: $form-toggle-height / 2;
+    top: $form-toggle-top;
+    left: 0;
+    background: $form-toggle-bg;
+    border: 1px solid $form-toggle-bg;
+  }
+
+  .form__label:after {
+    width: $form-toggle-circle-size;
+    height: $form-toggle-circle-size;
+    border-radius: $form-toggle-circle-size / 2;
+    background: #fff;
+    top: $form-toggle-top + 1;
+    left: 1px;
+  }
+
+  .form__control:checked + .form__label {
+    &:after {
+      left: $form-toggle-width - $form-toggle-circle-size - 1;
+    }
+
+    &:before {
+      background: $form-toggle-checked-bg;
+      border: 1px solid $form-toggle-checked-bg;
+    }
+  }
+
+  .form__control:focus + .form__label:before {
+    border: 1px solid darken($form-toggle-bg, 10);
+  }
+
+  .form__control:focus:checked + .form__label:before {
+    border: 1px solid darken($form-toggle-checked-bg, 10);
+  }
+}
+
+// Web-kit
+::-webkit-input-placeholder {
+  color: $color-form-control-placeholder;
+}
+
+// FF4-18
+:-moz-placeholder {
+  color: $color-form-control-placeholder;
+}
+
+// FF19+
+::-moz-placeholder {
+  color: $color-form-control-placeholder;
+}
+
+// IE10
+:-ms-input-placeholder {
+  color: $color-form-control-placeholder;
+}
+
+// Fix for input type search
+[type="search"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+// Hack for webkit only
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  select.form__control {
+    @include select();
+  }
+}
+
+// Hack for firefox
+@-moz-document url-prefix() {
+  select,
+  select.form__control {
+    @include select();
+  }
+}

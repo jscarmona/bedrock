@@ -1,25 +1,26 @@
 // Grid
 $grid-columns: 12;
-$grid-gutter: 2.6315789 !default; // 1140 / 30
+$grid-gutter: 2.6315789; // 1140 / 30
 
 // Breakpoints
-$breakpoint-sm: 480px !default;
-$breakpoint-md: 768px !default;
-$breakpoint-lg: 970px !default;
-$breakpoint-xl: 1200px !default;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 970px;
+$breakpoint-xl: 1200px;
 
 // Containers
-$container-width-sm: 95% !default;
-$container-width-md: 95% !default;
-$container-width-lg: 960px !default;
-$container-width-xl: 1140px !default;
+$container-width-sm: 95%;
+$container-width-md: 95%;
+$container-width-lg: 960px;
+$container-width-xl: 1140px;
 $container-width-default: $container-width-sm;
 
 // Fonts
-$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif: Georgia, "Times New", serif !default;
-$font-family-monospace: Menlo, Consolas, "Courier New", monospace !default;
+$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: Georgia, "Times New", serif;
+$font-family-monospace: Menlo, Consolas, "Courier New", monospace;
 $font-family-headings: $font-family-sans-serif;
+$font-family-form-control: $font-family-sans-serif;
 $font-family-default: $font-family-sans-serif;
 
 // Font Size
@@ -34,6 +35,7 @@ $font-weight-bold: 700;
 // Line Height
 $line-height-default: 1.7;
 $line-height-code: 1.5;
+$line-height-form-control: 1.5;
 
 // Colors
 $color-primary: $blue;
@@ -41,21 +43,44 @@ $color-success: $green;
 $color-code: #333;
 $color-default: $black;
 $color-selection: $white;
+$color-form-control: $black;
+$color-form-control-focus: $black;
+$color-form-control-placeholder: $gray;
 $color-diff: #151515;
 $color-headings-small: $gray;
 $color-mark: $yellow;
+$color-success: #1BBC9B;
+$color-warning: #F1C000;
+$color-error: #E74C3C;
+$color-info: $blue;
 
 // Backgrounds
 $background-color-body: $white;
 $background-color-code: #F7F7FE;
 $background-color-selection: #2980B9;
+$background-color-form-control: #FFFFFF;
 
-// Borders
+// Border Color
 $border-color-code: #E1E1E1;
 $border-color-blockquote: $gray;
+$border-color-default: $gray;
+$border-color-form-control-focus: $blue;
+
+// Border Radius
+$border-radius-form-control: 3px;
 
 // Animations
 $transition-time: 0.2s;
 
 // Margins
 $margin-default: 1.5rem;
+$margin-form-group: 1.5rem;
+$margin-form-control: 0.5rem;
+
+// Form Toggles
+$form-toggle-height: 24px;
+$form-toggle-width: 40px;
+$form-toggle-bg: #c3c5c4;
+$form-toggle-checked-bg: $color-primary;
+$form-toggle-circle-size: $form-toggle-height - 2;
+$form-toggle-top: ($font-size-body * 1.5 - $form-toggle-height) / 2;
