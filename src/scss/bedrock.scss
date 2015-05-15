@@ -1,21 +1,21 @@
 // Core
-@import "core/normalize";
 @import "core/mixins";
 @import "core/colors";
 @import "core/variables";
 @import "core/fonts";
-@import "core/helpers";
 
 // Vendor
 @import "jeet/scss/jeet/index";
+@import "normalize-scss/normalize";
 
 // Base
 @import "base/buttons";
 @import "base/forms";
 @import "base/grid";
+@import "base/helpers";
 @import "base/icons";
 @import "base/lists";
 @import "base/media";
+@import "base/structure";
 @import "base/tables";
 @import "base/typography";
-@import "base/structure";

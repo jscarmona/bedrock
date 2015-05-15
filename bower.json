@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "jeet": "~6.1.2"
+    "jeet": "~6.1.2",
+    "normalize-scss": "~3.0.3"
   },
   "overrides": {
     "jeet": {
