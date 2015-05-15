@@ -6,7 +6,29 @@
   padding-right: 36px;
 }
 
-.form__group {
+@mixin form__control--horizontal() {
+  @include col(3/4);
+  @include shift(1/4);
+
+  margin-bottom: 0;
+}
+
+@mixin form__label--horizontal() {
+    @include col(1/4);
+
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+}
+
+.form__group,
+.form__group--error,
+.form__group--warning,
+.form__group--info,
+.form__group--success {
   margin-bottom: $margin-form-group;
 }
 
@@ -17,6 +39,57 @@
 .form__group--xl-horizontal {
   @extend .form__group;
   @include cf();
+
+  position: relative;
+}
+
+.form__label {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  .form__group--error & {
+    color: $color-error;
+    border-color: $color-error;
+  }
+
+  .form__group--warning & {
+    color: $color-warning;
+    border-color: $color-warning;
+  }
+
+  .form__group--success & {
+    color: $color-success;
+    border-color: $color-success;
+  }
+
+  .form__group--info & {
+    color: $color-info;
+    border-color: $color-info;
+  }
+
+  .form__group--horizontal & { @include form__label--horizontal(); }
+
+  @include breakpointLargerThan($breakpoint-sm) {
+    .form__group--sm-horizontal & { @include form__label--horizontal(); }
+  }
+
+  @include breakpointLargerThan($breakpoint-md) {
+    .form__group--md-horizontal & { @include form__label--horizontal(); }
+  }
+
+  @include breakpointLargerThan($breakpoint-lg) {
+    .form__group--lg-horizontal & { @include form__label--horizontal(); }
+  }
+
+  @include breakpointLargerThan($breakpoint-xl) {
+    .form__group--xl-horizontal & { @include form__label--horizontal(); }
+  }
+}
+
+.form__label--error {
+  @extend .form__label;
 }
 
 input[type="text"],
@@ -36,7 +109,6 @@ textarea {
     width: 100%;
     max-width: 100%;
     padding: 0.5rem;
-    margin-bottom: $margin-form-control;
     font-family: $font-family-form-control;
     font-weight: $font-weight-regular;
     color: $color-form-control;
@@ -54,47 +126,38 @@ textarea {
       outline: none;
     }
 
-    &.error,
-    .form__group.error & {
+    .form__group--error & {
       border-color: $color-error;
     }
 
-    &.warning,
-    .form__group.warning & {
+    .form__group--warning & {
       border-color: $color-warning;
     }
 
-    &.success,
-    .form__group.success & {
+    .form__group--success & {
       border-color: $color-success;
     }
 
-    .form__group--horizontal & {
-      @include col(3/4);
+    .form__group--info & {
+      border-color: $color-info;
     }
 
+    .form__group--horizontal & { @include form__control--horizontal(); }
+
     @include breakpointLargerThan($breakpoint-sm) {
-      .form__group--sm-horizontal & {
-        @include col(3/4);
-      }
+      .form__group--sm-horizontal & { @include form__control--horizontal(); }
     }
 
     @include breakpointLargerThan($breakpoint-md) {
-      .form__group--md-horizontal & {
-        @include col(3/4);
-      }
+      .form__group--md-horizontal & { @include form__control--horizontal(); }
     }
 
     @include breakpointLargerThan($breakpoint-lg) {
-      .form__group--lg-horizontal & {
-        @include col(3/4);
-      }
+      .form__group--lg-horizontal & { @include form__control--horizontal(); }
     }
 
     @include breakpointLargerThan($breakpoint-xl) {
-      .form__group--xl-horizontal & {
-        @include col(3/4);
-      }
+      .form__group--xl-horizontal & { @include form__control--horizontal(); }
     }
   }
 }
@@ -106,78 +169,15 @@ input[type="radio"] {
   }
 }
 
-textarea {
+textarea.form__control {
   height: auto;
   min-height: 6.25rem;
   line-height: $line-height-form-control;
 }
 
-select {
+select.form__control {
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-.form__label {
-  display: inline-block;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  line-height: 1.5rem;
-
-  &.error,
-  .form__group.error & {
-    color: $color-error;
-    border-color: $color-error;
-  }
-
-  &.warning,
-  .form__group.warning & {
-    color: $color-warning;
-    border-color: $color-warning;
-  }
-
-  &.success,
-  .form__group.success & {
-    color: $color-success;
-    border-color: $color-success;
-  }
-
-  .form__group--horizontal & {
-    @include col(1/4);
-    text-align: right;
-    line-height: 2.625rem;
-  }
-
-  @include breakpointLargerThan($breakpoint-sm) {
-    .form__group--sm-horizontal & {
-      @include col(1/4);
-      text-align: right;
-      line-height: 2.625rem;
-    }
-  }
-
-  @include breakpointLargerThan($breakpoint-md) {
-    .form__group--md-horizontal & {
-      @include col(1/4);
-      text-align: right;
-      line-height: 2.625rem;
-    }
-  }
-
-  @include breakpointLargerThan($breakpoint-lg) {
-    .form__group--lg-horizontal & {
-      @include col(1/4);
-      text-align: right;
-      line-height: 2.625rem;
-    }
-  }
-
-  @include breakpointLargerThan($breakpoint-xl) {
-    .form__group--xl-horizontal & {
-      @include col(1/4);
-      text-align: right;
-      line-height: 2.625rem;
-    }
-  }
 }
 
 .form__toggle {
@@ -238,25 +238,10 @@ select {
   }
 }
 
-// Web-kit
-::-webkit-input-placeholder {
-  color: $color-form-control-placeholder;
-}
-
-// FF4-18
-:-moz-placeholder {
-  color: $color-form-control-placeholder;
-}
-
-// FF19+
-::-moz-placeholder {
-  color: $color-form-control-placeholder;
-}
-
-// IE10
-:-ms-input-placeholder {
-  color: $color-form-control-placeholder;
-}
+::-webkit-input-placeholder { color: $color-form-control-placeholder; }
+:-moz-placeholder { color: $color-form-control-placeholder; }
+::-moz-placeholder { color: $color-form-control-placeholder; }
+:-ms-input-placeholder { color: $color-form-control-placeholder; }
 
 // Fix for input type search
 [type="search"] {
@@ -267,7 +252,6 @@ select {
 
 // Hack for webkit only
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select,
   select.form__control {
     @include select();
   }
@@ -275,7 +259,6 @@ select {
 
 // Hack for firefox
 @-moz-document url-prefix() {
-  select,
   select.form__control {
     @include select();
   }

@@ -578,7 +578,11 @@ th {
 .form__group--sm-horizontal,
 .form__group--md-horizontal,
 .form__group--lg-horizontal,
-.form__group--xl-horizontal {
+.form__group--xl-horizontal,
+.form__group--error,
+.form__group--warning,
+.form__group--info,
+.form__group--success {
   margin-bottom: 1.5rem;
 }
 
@@ -588,6 +592,7 @@ th {
 .form__group--lg-horizontal,
 .form__group--xl-horizontal {
   *zoom: 1;
+  position: relative;
 }
 .form__group--horizontal:before, .form__group--horizontal:after,
 .form__group--sm-horizontal:before,
@@ -609,6 +614,172 @@ th {
   clear: both;
 }
 
+.form__label, .form__label--error {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.form__group--error .form__label, .form__group--error .form__label--error {
+  color: #E74C3C;
+  border-color: #E74C3C;
+}
+.form__group--warning .form__label, .form__group--warning .form__label--error {
+  color: #F1C000;
+  border-color: #F1C000;
+}
+.form__group--success .form__label, .form__group--success .form__label--error {
+  color: #1BBC9B;
+  border-color: #1BBC9B;
+}
+.form__group--info .form__label, .form__group--info .form__label--error {
+  color: #0074D9;
+  border-color: #0074D9;
+}
+.form__group--horizontal .form__label, .form__group--horizontal .form__label--error {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-bottom: 0;
+}
+.form__group--horizontal .form__label:before, .form__group--horizontal .form__label--error:before, .form__group--horizontal .form__label:after, .form__group--horizontal .form__label--error:after {
+  content: '';
+  display: table;
+}
+.form__group--horizontal .form__label:after, .form__group--horizontal .form__label--error:after {
+  clear: both;
+}
+.form__group--horizontal .form__label:last-child, .form__group--horizontal .form__label--error:last-child {
+  margin-right: 0%;
+}
+@media (min-width: 480px) {
+  .form__group--sm-horizontal .form__label, .form__group--sm-horizontal .form__label--error {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+  .form__group--sm-horizontal .form__label:before, .form__group--sm-horizontal .form__label--error:before, .form__group--sm-horizontal .form__label:after, .form__group--sm-horizontal .form__label--error:after {
+    content: '';
+    display: table;
+  }
+  .form__group--sm-horizontal .form__label:after, .form__group--sm-horizontal .form__label--error:after {
+    clear: both;
+  }
+  .form__group--sm-horizontal .form__label:last-child, .form__group--sm-horizontal .form__label--error:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 768px) {
+  .form__group--md-horizontal .form__label, .form__group--md-horizontal .form__label--error {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+  .form__group--md-horizontal .form__label:before, .form__group--md-horizontal .form__label--error:before, .form__group--md-horizontal .form__label:after, .form__group--md-horizontal .form__label--error:after {
+    content: '';
+    display: table;
+  }
+  .form__group--md-horizontal .form__label:after, .form__group--md-horizontal .form__label--error:after {
+    clear: both;
+  }
+  .form__group--md-horizontal .form__label:last-child, .form__group--md-horizontal .form__label--error:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 970px) {
+  .form__group--lg-horizontal .form__label, .form__group--lg-horizontal .form__label--error {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+  .form__group--lg-horizontal .form__label:before, .form__group--lg-horizontal .form__label--error:before, .form__group--lg-horizontal .form__label:after, .form__group--lg-horizontal .form__label--error:after {
+    content: '';
+    display: table;
+  }
+  .form__group--lg-horizontal .form__label:after, .form__group--lg-horizontal .form__label--error:after {
+    clear: both;
+  }
+  .form__group--lg-horizontal .form__label:last-child, .form__group--lg-horizontal .form__label--error:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 1200px) {
+  .form__group--xl-horizontal .form__label, .form__group--xl-horizontal .form__label--error {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+  .form__group--xl-horizontal .form__label:before, .form__group--xl-horizontal .form__label--error:before, .form__group--xl-horizontal .form__label:after, .form__group--xl-horizontal .form__label--error:after {
+    content: '';
+    display: table;
+  }
+  .form__group--xl-horizontal .form__label:after, .form__group--xl-horizontal .form__label--error:after {
+    clear: both;
+  }
+  .form__group--xl-horizontal .form__label:last-child, .form__group--xl-horizontal .form__label--error:last-child {
+    margin-right: 0%;
+  }
+}
+
 input[type="text"].form__control,
 input[type="password"].form__control,
 input[type="date"].form__control,
@@ -625,7 +796,6 @@ textarea.form__control {
   width: 100%;
   max-width: 100%;
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   color: #111;
@@ -653,389 +823,61 @@ textarea.form__control:focus {
   color: #111;
   outline: none;
 }
-input[type="text"].form__control.error, .form__group.error input[type="text"].form__control, .error.form__group--horizontal input[type="text"].form__control,
-.error.form__group--sm-horizontal input[type="text"].form__control,
-.error.form__group--md-horizontal input[type="text"].form__control,
-.error.form__group--lg-horizontal input[type="text"].form__control,
-.error.form__group--xl-horizontal input[type="text"].form__control,
-input[type="password"].form__control.error, .form__group.error
-input[type="password"].form__control, .error.form__group--horizontal
-input[type="password"].form__control,
-.error.form__group--sm-horizontal
-input[type="password"].form__control,
-.error.form__group--md-horizontal
-input[type="password"].form__control,
-.error.form__group--lg-horizontal
-input[type="password"].form__control,
-.error.form__group--xl-horizontal
-input[type="password"].form__control,
-input[type="date"].form__control.error, .form__group.error
-input[type="date"].form__control, .error.form__group--horizontal
-input[type="date"].form__control,
-.error.form__group--sm-horizontal
-input[type="date"].form__control,
-.error.form__group--md-horizontal
-input[type="date"].form__control,
-.error.form__group--lg-horizontal
-input[type="date"].form__control,
-.error.form__group--xl-horizontal
-input[type="date"].form__control,
-input[type="datetime"].form__control.error, .form__group.error
-input[type="datetime"].form__control, .error.form__group--horizontal
-input[type="datetime"].form__control,
-.error.form__group--sm-horizontal
-input[type="datetime"].form__control,
-.error.form__group--md-horizontal
-input[type="datetime"].form__control,
-.error.form__group--lg-horizontal
-input[type="datetime"].form__control,
-.error.form__group--xl-horizontal
-input[type="datetime"].form__control,
-input[type="email"].form__control.error, .form__group.error
-input[type="email"].form__control, .error.form__group--horizontal
-input[type="email"].form__control,
-.error.form__group--sm-horizontal
-input[type="email"].form__control,
-.error.form__group--md-horizontal
-input[type="email"].form__control,
-.error.form__group--lg-horizontal
-input[type="email"].form__control,
-.error.form__group--xl-horizontal
-input[type="email"].form__control,
-input[type="number"].form__control.error, .form__group.error
-input[type="number"].form__control, .error.form__group--horizontal
-input[type="number"].form__control,
-.error.form__group--sm-horizontal
-input[type="number"].form__control,
-.error.form__group--md-horizontal
-input[type="number"].form__control,
-.error.form__group--lg-horizontal
-input[type="number"].form__control,
-.error.form__group--xl-horizontal
-input[type="number"].form__control,
-input[type="search"].form__control.error, .form__group.error
-input[type="search"].form__control, .error.form__group--horizontal
-input[type="search"].form__control,
-.error.form__group--sm-horizontal
-input[type="search"].form__control,
-.error.form__group--md-horizontal
-input[type="search"].form__control,
-.error.form__group--lg-horizontal
-input[type="search"].form__control,
-.error.form__group--xl-horizontal
-input[type="search"].form__control,
-input[type="tel"].form__control.error, .form__group.error
-input[type="tel"].form__control, .error.form__group--horizontal
-input[type="tel"].form__control,
-.error.form__group--sm-horizontal
-input[type="tel"].form__control,
-.error.form__group--md-horizontal
-input[type="tel"].form__control,
-.error.form__group--lg-horizontal
-input[type="tel"].form__control,
-.error.form__group--xl-horizontal
-input[type="tel"].form__control,
-input[type="time"].form__control.error, .form__group.error
-input[type="time"].form__control, .error.form__group--horizontal
-input[type="time"].form__control,
-.error.form__group--sm-horizontal
-input[type="time"].form__control,
-.error.form__group--md-horizontal
-input[type="time"].form__control,
-.error.form__group--lg-horizontal
-input[type="time"].form__control,
-.error.form__group--xl-horizontal
-input[type="time"].form__control,
-input[type="url"].form__control.error, .form__group.error
-input[type="url"].form__control, .error.form__group--horizontal
-input[type="url"].form__control,
-.error.form__group--sm-horizontal
-input[type="url"].form__control,
-.error.form__group--md-horizontal
-input[type="url"].form__control,
-.error.form__group--lg-horizontal
-input[type="url"].form__control,
-.error.form__group--xl-horizontal
-input[type="url"].form__control,
-select.form__control.error, .form__group.error
-select.form__control, .error.form__group--horizontal
-select.form__control,
-.error.form__group--sm-horizontal
-select.form__control,
-.error.form__group--md-horizontal
-select.form__control,
-.error.form__group--lg-horizontal
-select.form__control,
-.error.form__group--xl-horizontal
-select.form__control,
-textarea.form__control.error, .form__group.error
-textarea.form__control, .error.form__group--horizontal
-textarea.form__control,
-.error.form__group--sm-horizontal
-textarea.form__control,
-.error.form__group--md-horizontal
-textarea.form__control,
-.error.form__group--lg-horizontal
-textarea.form__control,
-.error.form__group--xl-horizontal
+.form__group--error input[type="text"].form__control, .form__group--error
+input[type="password"].form__control, .form__group--error
+input[type="date"].form__control, .form__group--error
+input[type="datetime"].form__control, .form__group--error
+input[type="email"].form__control, .form__group--error
+input[type="number"].form__control, .form__group--error
+input[type="search"].form__control, .form__group--error
+input[type="tel"].form__control, .form__group--error
+input[type="time"].form__control, .form__group--error
+input[type="url"].form__control, .form__group--error
+select.form__control, .form__group--error
 textarea.form__control {
   border-color: #E74C3C;
 }
-input[type="text"].form__control.warning, .form__group.warning input[type="text"].form__control, .warning.form__group--horizontal input[type="text"].form__control,
-.warning.form__group--sm-horizontal input[type="text"].form__control,
-.warning.form__group--md-horizontal input[type="text"].form__control,
-.warning.form__group--lg-horizontal input[type="text"].form__control,
-.warning.form__group--xl-horizontal input[type="text"].form__control,
-input[type="password"].form__control.warning, .form__group.warning
-input[type="password"].form__control, .warning.form__group--horizontal
-input[type="password"].form__control,
-.warning.form__group--sm-horizontal
-input[type="password"].form__control,
-.warning.form__group--md-horizontal
-input[type="password"].form__control,
-.warning.form__group--lg-horizontal
-input[type="password"].form__control,
-.warning.form__group--xl-horizontal
-input[type="password"].form__control,
-input[type="date"].form__control.warning, .form__group.warning
-input[type="date"].form__control, .warning.form__group--horizontal
-input[type="date"].form__control,
-.warning.form__group--sm-horizontal
-input[type="date"].form__control,
-.warning.form__group--md-horizontal
-input[type="date"].form__control,
-.warning.form__group--lg-horizontal
-input[type="date"].form__control,
-.warning.form__group--xl-horizontal
-input[type="date"].form__control,
-input[type="datetime"].form__control.warning, .form__group.warning
-input[type="datetime"].form__control, .warning.form__group--horizontal
-input[type="datetime"].form__control,
-.warning.form__group--sm-horizontal
-input[type="datetime"].form__control,
-.warning.form__group--md-horizontal
-input[type="datetime"].form__control,
-.warning.form__group--lg-horizontal
-input[type="datetime"].form__control,
-.warning.form__group--xl-horizontal
-input[type="datetime"].form__control,
-input[type="email"].form__control.warning, .form__group.warning
-input[type="email"].form__control, .warning.form__group--horizontal
-input[type="email"].form__control,
-.warning.form__group--sm-horizontal
-input[type="email"].form__control,
-.warning.form__group--md-horizontal
-input[type="email"].form__control,
-.warning.form__group--lg-horizontal
-input[type="email"].form__control,
-.warning.form__group--xl-horizontal
-input[type="email"].form__control,
-input[type="number"].form__control.warning, .form__group.warning
-input[type="number"].form__control, .warning.form__group--horizontal
-input[type="number"].form__control,
-.warning.form__group--sm-horizontal
-input[type="number"].form__control,
-.warning.form__group--md-horizontal
-input[type="number"].form__control,
-.warning.form__group--lg-horizontal
-input[type="number"].form__control,
-.warning.form__group--xl-horizontal
-input[type="number"].form__control,
-input[type="search"].form__control.warning, .form__group.warning
-input[type="search"].form__control, .warning.form__group--horizontal
-input[type="search"].form__control,
-.warning.form__group--sm-horizontal
-input[type="search"].form__control,
-.warning.form__group--md-horizontal
-input[type="search"].form__control,
-.warning.form__group--lg-horizontal
-input[type="search"].form__control,
-.warning.form__group--xl-horizontal
-input[type="search"].form__control,
-input[type="tel"].form__control.warning, .form__group.warning
-input[type="tel"].form__control, .warning.form__group--horizontal
-input[type="tel"].form__control,
-.warning.form__group--sm-horizontal
-input[type="tel"].form__control,
-.warning.form__group--md-horizontal
-input[type="tel"].form__control,
-.warning.form__group--lg-horizontal
-input[type="tel"].form__control,
-.warning.form__group--xl-horizontal
-input[type="tel"].form__control,
-input[type="time"].form__control.warning, .form__group.warning
-input[type="time"].form__control, .warning.form__group--horizontal
-input[type="time"].form__control,
-.warning.form__group--sm-horizontal
-input[type="time"].form__control,
-.warning.form__group--md-horizontal
-input[type="time"].form__control,
-.warning.form__group--lg-horizontal
-input[type="time"].form__control,
-.warning.form__group--xl-horizontal
-input[type="time"].form__control,
-input[type="url"].form__control.warning, .form__group.warning
-input[type="url"].form__control, .warning.form__group--horizontal
-input[type="url"].form__control,
-.warning.form__group--sm-horizontal
-input[type="url"].form__control,
-.warning.form__group--md-horizontal
-input[type="url"].form__control,
-.warning.form__group--lg-horizontal
-input[type="url"].form__control,
-.warning.form__group--xl-horizontal
-input[type="url"].form__control,
-select.form__control.warning, .form__group.warning
-select.form__control, .warning.form__group--horizontal
-select.form__control,
-.warning.form__group--sm-horizontal
-select.form__control,
-.warning.form__group--md-horizontal
-select.form__control,
-.warning.form__group--lg-horizontal
-select.form__control,
-.warning.form__group--xl-horizontal
-select.form__control,
-textarea.form__control.warning, .form__group.warning
-textarea.form__control, .warning.form__group--horizontal
-textarea.form__control,
-.warning.form__group--sm-horizontal
-textarea.form__control,
-.warning.form__group--md-horizontal
-textarea.form__control,
-.warning.form__group--lg-horizontal
-textarea.form__control,
-.warning.form__group--xl-horizontal
+.form__group--warning input[type="text"].form__control, .form__group--warning
+input[type="password"].form__control, .form__group--warning
+input[type="date"].form__control, .form__group--warning
+input[type="datetime"].form__control, .form__group--warning
+input[type="email"].form__control, .form__group--warning
+input[type="number"].form__control, .form__group--warning
+input[type="search"].form__control, .form__group--warning
+input[type="tel"].form__control, .form__group--warning
+input[type="time"].form__control, .form__group--warning
+input[type="url"].form__control, .form__group--warning
+select.form__control, .form__group--warning
 textarea.form__control {
   border-color: #F1C000;
 }
-input[type="text"].form__control.success, .form__group.success input[type="text"].form__control, .success.form__group--horizontal input[type="text"].form__control,
-.success.form__group--sm-horizontal input[type="text"].form__control,
-.success.form__group--md-horizontal input[type="text"].form__control,
-.success.form__group--lg-horizontal input[type="text"].form__control,
-.success.form__group--xl-horizontal input[type="text"].form__control,
-input[type="password"].form__control.success, .form__group.success
-input[type="password"].form__control, .success.form__group--horizontal
-input[type="password"].form__control,
-.success.form__group--sm-horizontal
-input[type="password"].form__control,
-.success.form__group--md-horizontal
-input[type="password"].form__control,
-.success.form__group--lg-horizontal
-input[type="password"].form__control,
-.success.form__group--xl-horizontal
-input[type="password"].form__control,
-input[type="date"].form__control.success, .form__group.success
-input[type="date"].form__control, .success.form__group--horizontal
-input[type="date"].form__control,
-.success.form__group--sm-horizontal
-input[type="date"].form__control,
-.success.form__group--md-horizontal
-input[type="date"].form__control,
-.success.form__group--lg-horizontal
-input[type="date"].form__control,
-.success.form__group--xl-horizontal
-input[type="date"].form__control,
-input[type="datetime"].form__control.success, .form__group.success
-input[type="datetime"].form__control, .success.form__group--horizontal
-input[type="datetime"].form__control,
-.success.form__group--sm-horizontal
-input[type="datetime"].form__control,
-.success.form__group--md-horizontal
-input[type="datetime"].form__control,
-.success.form__group--lg-horizontal
-input[type="datetime"].form__control,
-.success.form__group--xl-horizontal
-input[type="datetime"].form__control,
-input[type="email"].form__control.success, .form__group.success
-input[type="email"].form__control, .success.form__group--horizontal
-input[type="email"].form__control,
-.success.form__group--sm-horizontal
-input[type="email"].form__control,
-.success.form__group--md-horizontal
-input[type="email"].form__control,
-.success.form__group--lg-horizontal
-input[type="email"].form__control,
-.success.form__group--xl-horizontal
-input[type="email"].form__control,
-input[type="number"].form__control.success, .form__group.success
-input[type="number"].form__control, .success.form__group--horizontal
-input[type="number"].form__control,
-.success.form__group--sm-horizontal
-input[type="number"].form__control,
-.success.form__group--md-horizontal
-input[type="number"].form__control,
-.success.form__group--lg-horizontal
-input[type="number"].form__control,
-.success.form__group--xl-horizontal
-input[type="number"].form__control,
-input[type="search"].form__control.success, .form__group.success
-input[type="search"].form__control, .success.form__group--horizontal
-input[type="search"].form__control,
-.success.form__group--sm-horizontal
-input[type="search"].form__control,
-.success.form__group--md-horizontal
-input[type="search"].form__control,
-.success.form__group--lg-horizontal
-input[type="search"].form__control,
-.success.form__group--xl-horizontal
-input[type="search"].form__control,
-input[type="tel"].form__control.success, .form__group.success
-input[type="tel"].form__control, .success.form__group--horizontal
-input[type="tel"].form__control,
-.success.form__group--sm-horizontal
-input[type="tel"].form__control,
-.success.form__group--md-horizontal
-input[type="tel"].form__control,
-.success.form__group--lg-horizontal
-input[type="tel"].form__control,
-.success.form__group--xl-horizontal
-input[type="tel"].form__control,
-input[type="time"].form__control.success, .form__group.success
-input[type="time"].form__control, .success.form__group--horizontal
-input[type="time"].form__control,
-.success.form__group--sm-horizontal
-input[type="time"].form__control,
-.success.form__group--md-horizontal
-input[type="time"].form__control,
-.success.form__group--lg-horizontal
-input[type="time"].form__control,
-.success.form__group--xl-horizontal
-input[type="time"].form__control,
-input[type="url"].form__control.success, .form__group.success
-input[type="url"].form__control, .success.form__group--horizontal
-input[type="url"].form__control,
-.success.form__group--sm-horizontal
-input[type="url"].form__control,
-.success.form__group--md-horizontal
-input[type="url"].form__control,
-.success.form__group--lg-horizontal
-input[type="url"].form__control,
-.success.form__group--xl-horizontal
-input[type="url"].form__control,
-select.form__control.success, .form__group.success
-select.form__control, .success.form__group--horizontal
-select.form__control,
-.success.form__group--sm-horizontal
-select.form__control,
-.success.form__group--md-horizontal
-select.form__control,
-.success.form__group--lg-horizontal
-select.form__control,
-.success.form__group--xl-horizontal
-select.form__control,
-textarea.form__control.success, .form__group.success
-textarea.form__control, .success.form__group--horizontal
-textarea.form__control,
-.success.form__group--sm-horizontal
-textarea.form__control,
-.success.form__group--md-horizontal
-textarea.form__control,
-.success.form__group--lg-horizontal
-textarea.form__control,
-.success.form__group--xl-horizontal
+.form__group--success input[type="text"].form__control, .form__group--success
+input[type="password"].form__control, .form__group--success
+input[type="date"].form__control, .form__group--success
+input[type="datetime"].form__control, .form__group--success
+input[type="email"].form__control, .form__group--success
+input[type="number"].form__control, .form__group--success
+input[type="search"].form__control, .form__group--success
+input[type="tel"].form__control, .form__group--success
+input[type="time"].form__control, .form__group--success
+input[type="url"].form__control, .form__group--success
+select.form__control, .form__group--success
 textarea.form__control {
   border-color: #1BBC9B;
+}
+.form__group--info input[type="text"].form__control, .form__group--info
+input[type="password"].form__control, .form__group--info
+input[type="date"].form__control, .form__group--info
+input[type="datetime"].form__control, .form__group--info
+input[type="email"].form__control, .form__group--info
+input[type="number"].form__control, .form__group--info
+input[type="search"].form__control, .form__group--info
+input[type="tel"].form__control, .form__group--info
+input[type="time"].form__control, .form__group--info
+input[type="url"].form__control, .form__group--info
+select.form__control, .form__group--info
+textarea.form__control {
+  border-color: #0074D9;
 }
 .form__group--horizontal input[type="text"].form__control, .form__group--horizontal
 input[type="password"].form__control, .form__group--horizontal
@@ -1056,6 +898,9 @@ textarea.form__control {
   width: 74.25%;
   margin-left: 0%;
   margin-right: 3%;
+  position: relative;
+  left: 25.75%;
+  margin-bottom: 0;
 }
 .form__group--horizontal input[type="text"].form__control:before, .form__group--horizontal input[type="text"].form__control:after, .form__group--horizontal
 input[type="password"].form__control:before, .form__group--horizontal
@@ -1131,6 +976,9 @@ textarea.form__control:last-child {
     width: 74.25%;
     margin-left: 0%;
     margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    margin-bottom: 0;
   }
   .form__group--sm-horizontal input[type="text"].form__control:before, .form__group--sm-horizontal input[type="text"].form__control:after, .form__group--sm-horizontal
   input[type="password"].form__control:before, .form__group--sm-horizontal
@@ -1207,6 +1055,9 @@ textarea.form__control:last-child {
     width: 74.25%;
     margin-left: 0%;
     margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    margin-bottom: 0;
   }
   .form__group--md-horizontal input[type="text"].form__control:before, .form__group--md-horizontal input[type="text"].form__control:after, .form__group--md-horizontal
   input[type="password"].form__control:before, .form__group--md-horizontal
@@ -1283,6 +1134,9 @@ textarea.form__control:last-child {
     width: 74.25%;
     margin-left: 0%;
     margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    margin-bottom: 0;
   }
   .form__group--lg-horizontal input[type="text"].form__control:before, .form__group--lg-horizontal input[type="text"].form__control:after, .form__group--lg-horizontal
   input[type="password"].form__control:before, .form__group--lg-horizontal
@@ -1359,6 +1213,9 @@ textarea.form__control:last-child {
     width: 74.25%;
     margin-left: 0%;
     margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    margin-bottom: 0;
   }
   .form__group--xl-horizontal input[type="text"].form__control:before, .form__group--xl-horizontal input[type="text"].form__control:after, .form__group--xl-horizontal
   input[type="password"].form__control:before, .form__group--xl-horizontal
@@ -1421,159 +1278,15 @@ input[type="radio"].form__control {
   margin-right: 0.5rem;
 }
 
-textarea {
+textarea.form__control {
   height: auto;
   min-height: 6.25rem;
   line-height: 1.5;
 }
 
-select {
+select.form__control {
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-.form__label {
-  display: inline-block;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  line-height: 1.5rem;
-}
-.form__label.error, .form__group.error .form__label, .error.form__group--horizontal .form__label,
-.error.form__group--sm-horizontal .form__label,
-.error.form__group--md-horizontal .form__label,
-.error.form__group--lg-horizontal .form__label,
-.error.form__group--xl-horizontal .form__label {
-  color: #E74C3C;
-  border-color: #E74C3C;
-}
-.form__label.warning, .form__group.warning .form__label, .warning.form__group--horizontal .form__label,
-.warning.form__group--sm-horizontal .form__label,
-.warning.form__group--md-horizontal .form__label,
-.warning.form__group--lg-horizontal .form__label,
-.warning.form__group--xl-horizontal .form__label {
-  color: #F1C000;
-  border-color: #F1C000;
-}
-.form__label.success, .form__group.success .form__label, .success.form__group--horizontal .form__label,
-.success.form__group--sm-horizontal .form__label,
-.success.form__group--md-horizontal .form__label,
-.success.form__group--lg-horizontal .form__label,
-.success.form__group--xl-horizontal .form__label {
-  color: #1BBC9B;
-  border-color: #1BBC9B;
-}
-.form__group--horizontal .form__label {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-  text-align: right;
-  line-height: 2.625rem;
-}
-.form__group--horizontal .form__label:before, .form__group--horizontal .form__label:after {
-  content: '';
-  display: table;
-}
-.form__group--horizontal .form__label:after {
-  clear: both;
-}
-.form__group--horizontal .form__label:last-child {
-  margin-right: 0%;
-}
-@media (min-width: 480px) {
-  .form__group--sm-horizontal .form__label {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 22.75%;
-    margin-left: 0%;
-    margin-right: 3%;
-    text-align: right;
-    line-height: 2.625rem;
-  }
-  .form__group--sm-horizontal .form__label:before, .form__group--sm-horizontal .form__label:after {
-    content: '';
-    display: table;
-  }
-  .form__group--sm-horizontal .form__label:after {
-    clear: both;
-  }
-  .form__group--sm-horizontal .form__label:last-child {
-    margin-right: 0%;
-  }
-}
-@media (min-width: 768px) {
-  .form__group--md-horizontal .form__label {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 22.75%;
-    margin-left: 0%;
-    margin-right: 3%;
-    text-align: right;
-    line-height: 2.625rem;
-  }
-  .form__group--md-horizontal .form__label:before, .form__group--md-horizontal .form__label:after {
-    content: '';
-    display: table;
-  }
-  .form__group--md-horizontal .form__label:after {
-    clear: both;
-  }
-  .form__group--md-horizontal .form__label:last-child {
-    margin-right: 0%;
-  }
-}
-@media (min-width: 970px) {
-  .form__group--lg-horizontal .form__label {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 22.75%;
-    margin-left: 0%;
-    margin-right: 3%;
-    text-align: right;
-    line-height: 2.625rem;
-  }
-  .form__group--lg-horizontal .form__label:before, .form__group--lg-horizontal .form__label:after {
-    content: '';
-    display: table;
-  }
-  .form__group--lg-horizontal .form__label:after {
-    clear: both;
-  }
-  .form__group--lg-horizontal .form__label:last-child {
-    margin-right: 0%;
-  }
-}
-@media (min-width: 1200px) {
-  .form__group--xl-horizontal .form__label {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 22.75%;
-    margin-left: 0%;
-    margin-right: 3%;
-    text-align: right;
-    line-height: 2.625rem;
-  }
-  .form__group--xl-horizontal .form__label:before, .form__group--xl-horizontal .form__label:after {
-    content: '';
-    display: table;
-  }
-  .form__group--xl-horizontal .form__label:after {
-    clear: both;
-  }
-  .form__group--xl-horizontal .form__label:last-child {
-    margin-right: 0%;
-  }
 }
 
 .form__toggle {
@@ -1585,15 +1298,16 @@ select {
   opacity: 0;
   position: absolute;
 }
-.form__toggle .form__label:before,
-.form__toggle .form__label:after {
+.form__toggle .form__label:before, .form__toggle .form__label--error:before,
+.form__toggle .form__label:after,
+.form__toggle .form__label--error:after {
   box-sizing: border-box;
   content: '';
   display: block;
   position: absolute;
   transition: all 0.25s;
 }
-.form__toggle .form__label:before {
+.form__toggle .form__label:before, .form__toggle .form__label--error:before {
   width: 40px;
   height: 24px;
   border-radius: 12px;
@@ -1602,7 +1316,7 @@ select {
   background: #c3c5c4;
   border: 1px solid #c3c5c4;
 }
-.form__toggle .form__label:after {
+.form__toggle .form__label:after, .form__toggle .form__label--error:after {
   width: 22px;
   height: 22px;
   border-radius: 11px;
@@ -1610,17 +1324,17 @@ select {
   top: 1px;
   left: 1px;
 }
-.form__toggle .form__control:checked + .form__label:after {
+.form__toggle .form__control:checked + .form__label:after, .form__toggle .form__control:checked + .form__label--error:after {
   left: 17px;
 }
-.form__toggle .form__control:checked + .form__label:before {
+.form__toggle .form__control:checked + .form__label:before, .form__toggle .form__control:checked + .form__label--error:before {
   background: #0074D9;
   border: 1px solid #0074D9;
 }
-.form__toggle .form__control:focus + .form__label:before {
+.form__toggle .form__control:focus + .form__label:before, .form__toggle .form__control:focus + .form__label--error:before {
   border: 1px solid #a9acab;
 }
-.form__toggle .form__control:focus:checked + .form__label:before {
+.form__toggle .form__control:focus:checked + .form__label:before, .form__toggle .form__control:focus:checked + .form__label--error:before {
   border: 1px solid #0059a6;
 }
 
@@ -1647,7 +1361,6 @@ select {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select,
   select.form__control {
     background-color: #FFFFFF;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
@@ -1657,7 +1370,6 @@ select {
   }
 }
 @-moz-document url-prefix() {
-  select,
   select.form__control {
     background-color: #FFFFFF;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
@@ -3904,3 +3616,5 @@ code {
 .text--capitalize {
   text-transform: capitalize;
 }
+
+
