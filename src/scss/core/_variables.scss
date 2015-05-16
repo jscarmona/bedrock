@@ -132,7 +132,11 @@ $form-toggle-top: ($font-size * 1.5 - $form-toggle-height) / 2;
 
 $table-background-color: #FFFFFF;
 $table-border-color: $silver;
+$table-border-radius: 3px;
 $table-cell-padding: 0.625rem;
 $table-line-height: $line-height;
 $table-margin: $margin;
 $table-th-font-weight: $font-weight-bold;
+$table-background-hover: $blue;
+$table-color-hover: $white;
+$table-row-background-color: #F8F8F8;

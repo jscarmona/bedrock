@@ -1,17 +1,10 @@
-table {
+.table {
+  width: 100%;
   max-width: 100%;
+  margin-bottom: $table-margin;
   background-color: $table-background-color;
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-th {
-  text-align: left;
-}
-
-.table {
-  width: 100%;
-  margin-bottom: $table-margin;
 
   th,
   td {
@@ -19,6 +12,10 @@ th {
     line-height: $table-line-height;
     vertical-align: top;
     border-top: 1px solid $table-border-color;
+  }
+
+  th {
+    text-align: left;
   }
 
   thead th {
@@ -43,3 +40,106 @@ th {
     background-color: $table-background-color;
   }
 }
+
+.table--condense {
+  th,
+  td {
+    padding: 4px 5px;
+  }
+}
+
+.table--stripe {
+  tr:nth-child(odd) > td {
+    background-color: $table-row-background-color;
+  }
+}
+
+.table--border {
+  border: 1px solid $table-border-color;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: $table-border-radius;
+
+  th,
+  td {
+      border-left: 1px solid $table-border-color;
+  }
+
+  caption + thead tr:first-child th,
+  caption + tbody tr:first-child th,
+  caption + tbody tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + tbody tr:first-child th,
+  colgroup + tbody tr:first-child td,
+  thead:first-child tr:first-child th,
+  tbody:first-child tr:first-child th,
+  tbody:first-child tr:first-child td {
+      border-top: 0;
+  }
+
+  thead:first-child tr:first-child > th:first-child,
+  tbody:first-child tr:first-child > td:first-child,
+  tbody:first-child tr:first-child > th:first-child {
+      border-top-left-radius: $table-border-radius;
+  }
+
+  thead:first-child tr:first-child > th:last-child,
+  tbody:first-child tr:first-child > td:last-child,
+  tbody:first-child tr:first-child > th:last-child {
+      border-top-right-radius: $table-border-radius;
+  }
+
+  thead:last-child tr:last-child > th:first-child,
+  tbody:last-child tr:last-child > td:first-child,
+  tbody:last-child tr:last-child > th:first-child,
+  tfoot:last-child tr:last-child > td:first-child,
+  tfoot:last-child tr:last-child > th:first-child {
+      border-bottom-left-radius: $table-border-radius;
+  }
+
+  thead:last-child tr:last-child > th:last-child,
+  tbody:last-child tr:last-child > td:last-child,
+  tbody:last-child tr:last-child > th:last-child,
+  tfoot:last-child tr:last-child > td:last-child,
+  tfoot:last-child tr:last-child > th:last-child {
+      border-bottom-right-radius: $table-border-radius;
+  }
+
+  tfoot + tbody:last-child tr:last-child td:first-child {
+      border-bottom-left-radius: 0;
+  }
+  tfoot + tbody:last-child tr:last-child td:last-child {
+      border-bottom-right-radius: 0;
+  }
+
+  caption + thead tr:first-child th:first-child,
+  caption + tbody tr:first-child td:first-child,
+  colgroup + thead tr:first-child th:first-child,
+  colgroup + tbody tr:first-child td:first-child {
+      border-top-left-radius: $table-border-radius;
+  }
+
+  caption + thead tr:first-child th:last-child,
+  caption + tbody tr:first-child td:last-child,
+  colgroup + thead tr:first-child th:last-child,
+  colgroup + tbody tr:first-child td:last-child {
+      border-top-right-radius: $table-border-radius;
+  }
+}
+
+.table--hover {
+  tr > td {
+    transition: background-color $transition-time, color $transition-time;
+  }
+
+  tr:hover > td {
+    background-color: $table-background-hover;
+    border-left-color: $table-background-hover;
+    color: $table-color-hover;
+
+    &:first-child{
+      border-left: 1px solid $table-border-color;
+    }
+  }
+}
+
