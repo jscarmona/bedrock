@@ -15,7 +15,7 @@
 
 @include breakpointSmallerThan($breakpoint-sm) {
   .container {
-    max-width: $container-width-default;
+    max-width: $container-width;
   }
 }
 

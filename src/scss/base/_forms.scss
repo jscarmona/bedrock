@@ -1,5 +1,5 @@
 @mixin select() {
-  background-color: $background-color-form-control;
+  background-color: $form-control-background-color;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: right center;
@@ -29,7 +29,7 @@
 .form__group--warning,
 .form__group--info,
 .form__group--success {
-  margin-bottom: $margin-form-group;
+  margin-bottom: $form-group-margin;
 }
 
 .form__group--horizontal,
@@ -109,20 +109,20 @@ textarea {
     width: 100%;
     max-width: 100%;
     padding: 0.5rem;
-    font-family: $font-family-form-control;
+    font-family: $form-control-font-family;
     font-weight: $font-weight-regular;
-    color: $color-form-control;
+    color: $form-control-color;
     font-size: 1rem;
-    border: 2px solid $border-color-default;
-    border-radius: $border-radius-form-control;
-    background-color: $background-color-form-control;
+    border: 2px solid $border-color;
+    border-radius: $form-control-border-radius;
+    background-color: $form-control-background-color;
     transition: border-color $transition-time, color $transition-time;
     -webkit-font-smoothing: antialiased;
     -webkit-appearance: none;
 
     &:focus {
-      border-color: $border-color-form-control-focus;
-      color: $color-form-control-focus;
+      border-color: $form-control-border-color-focus;
+      color: $form-control-color-focus;
       outline: none;
     }
 
@@ -172,7 +172,7 @@ input[type="radio"] {
 textarea.form__control {
   height: auto;
   min-height: 6.25rem;
-  line-height: $line-height-form-control;
+  line-height: $form-control-line-height;
 }
 
 select.form__control {
@@ -238,10 +238,10 @@ select.form__control {
   }
 }
 
-::-webkit-input-placeholder { color: $color-form-control-placeholder; }
-:-moz-placeholder { color: $color-form-control-placeholder; }
-::-moz-placeholder { color: $color-form-control-placeholder; }
-:-ms-input-placeholder { color: $color-form-control-placeholder; }
+::-webkit-input-placeholder { color: $form-control-color-placeholder; }
+:-moz-placeholder { color: $form-control-color-placeholder; }
+::-moz-placeholder { color: $form-control-color-placeholder; }
+:-ms-input-placeholder { color: $form-control-color-placeholder; }
 
 // Fix for input type search
 [type="search"] {

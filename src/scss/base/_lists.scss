@@ -23,7 +23,7 @@
 ul,
 ol {
   list-style-position: inside;
-  margin: $margin-default 0;
+  margin: $margin 0;
   padding: 0 1.5rem;
 }
 
@@ -40,7 +40,7 @@ li {
 }
 
 dl {
-  margin: 0 0 $margin-default;
+  margin: 0 0 $margin;
 }
 
 dt {
@@ -50,7 +50,7 @@ dt {
 }
 
 dd {
-  margin: 0 0 $margin-default;
+  margin: 0 0 $margin;
 }
 
 dl > dd:last-child {

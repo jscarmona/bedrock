@@ -8,7 +8,7 @@ h6 {
   margin: 0;
   font-weight: $font-weight-thin;
   font-family: $font-family-headings;
-  margin-bottom: $margin-default;
+  margin-bottom: $margin;
 }
 
 h1 {
@@ -42,11 +42,11 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 0.625em;
-  color: $color-headings-small;
+  color: $headings-small-color;
 }
 
 p {
-  line-height: $line-height-default;
+  line-height: $line-height;
   margin: 1rem 0;
 }
 
@@ -70,19 +70,19 @@ em {
 }
 
 mark {
-    background-color: $color-mark;
+    background-color: $mark-color;
     padding: 0 0.25em;
 }
 
 abbr,
 ins {
   text-decoration: none;
-  border-bottom: 1px dotted $color-default;
+  border-bottom: 1px dotted $color;
 }
 
 u {
   text-decoration: none;
-  border-bottom: 1px solid $color-default;
+  border-bottom: 1px solid $color;
 }
 
 kbd {
@@ -126,7 +126,7 @@ blockquote {
 
 hr {
   border: 0;
-  border-bottom: 1px solid darken($background-color-body, 7);
+  border-bottom: 1px solid darken($background-color, 7);
   margin: 20px 0 20px 0;
   clear: both;
 }
@@ -134,12 +134,12 @@ hr {
 pre,
 code {
   font-family: $font-family-monospace;
-  font-size: $font-size-code;
-  line-height: $line-height-code;
+  font-size: $code-font-size;
+  line-height: $code-line-height;
 
-  color: $color-code;
-  background-color: $background-color-code;
-  border: 1px solid $border-color-code;
+  color: $code-color;
+  background-color: $code-background-color;
+  border: 1px solid $code-border-color;
   border-radius: 3px;
 
   padding: 0.8rem 1rem;

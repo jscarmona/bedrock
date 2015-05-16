@@ -1,6 +1,61 @@
-// Grid
-$grid-columns: 12;
-$grid-gutter: 2.6315789; // 1140 / 30
+///////////////////////////////
+/// COLORS
+///////////////////////////////
+
+// Cool
+$aqua: #7FDBFF;
+$blue: #0074D9;
+$navy: #001F3F;
+$teal: #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime: #01FF70;
+
+// Warm
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$fuchsia: #F012BE;
+$purple: #B10DC9;
+$maroon: #85144B;
+
+// Gray Scale
+$white: #fff;
+$silver: #ddd;
+$gray: #aaa;
+$black: #111;
+
+///////////////////////////////
+/// FONT FAMILIES
+///////////////////////////////
+
+$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: Georgia, "Times New", serif;
+$font-family-monospace: Menlo, Consolas, "Courier New", monospace;
+$font-family-headings: $font-family-sans-serif;
+
+///////////////////////////////
+/// COMMON
+///////////////////////////////
+
+$background-color: $white;
+$background-color-selection: #2980B9;
+$border-color: $gray;
+$font-family: $font-family-sans-serif;
+$font-size: 16px;
+$line-height: 1.7;
+$margin: 1.5rem;
+$transition-time: 0.2s;
+
+// Colors
+$color: $black;
+$color-primary: $blue;
+$color-selection: $white;
+$color-success: #1BBC9B;
+$color-warning: #F1C000;
+$color-error: #E74C3C;
+$color-info: $blue;
+$color-diff: #151515;
 
 // Breakpoints
 $breakpoint-sm: 480px;
@@ -13,68 +68,54 @@ $container-width-sm: 95%;
 $container-width-md: 95%;
 $container-width-lg: 960px;
 $container-width-xl: 1140px;
-$container-width-default: $container-width-sm;
+$container-width: $container-width-sm;
 
-// Fonts
-$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif: Georgia, "Times New", serif;
-$font-family-monospace: Menlo, Consolas, "Courier New", monospace;
-$font-family-headings: $font-family-sans-serif;
-$font-family-form-control: $font-family-sans-serif;
-$font-family-default: $font-family-sans-serif;
-
-// Font Size
-$font-size-body: 16px;
-$font-size-code: 0.875rem;
-
-// Font Weight
+// Font Weights
 $font-weight-thin: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-// Line Height
-$line-height-default: 1.7;
-$line-height-code: 1.5;
-$line-height-form-control: 1.5;
+// Grid
+$grid-columns: 12;
+$grid-gutter: 2.6315789; // 1140 / 30
 
-// Colors
-$color-primary: $blue;
-$color-code: #333;
-$color-default: $black;
-$color-selection: $white;
-$color-form-control: $black;
-$color-form-control-focus: $black;
-$color-form-control-placeholder: $gray;
-$color-headings-small: $gray;
-$color-mark: $yellow;
-$color-success: #1BBC9B;
-$color-warning: #F1C000;
-$color-error: #E74C3C;
-$color-info: $blue;
-$color-diff: #151515;
+///////////////////////////////
+/// TYPOGRAPHY
+///////////////////////////////
 
-// Backgrounds
-$background-color-body: $white;
-$background-color-code: #F7F7FE;
-$background-color-selection: #2980B9;
-$background-color-form-control: #FFFFFF;
+// Headings
+$headings-small-color: $gray;
 
-// Border Color
-$border-color-code: #E1E1E1;
-$border-color-blockquote: $gray;
-$border-color-default: $gray;
-$border-color-form-control-focus: $blue;
+// Mark
+$mark-color: $yellow;
 
-// Border Radius
-$border-radius-form-control: 3px;
+// Blockquote
+$blockquote-border-color: $gray;
 
-// Animations
-$transition-time: 0.2s;
+// Code
+$code-color: #333;
+$code-background-color: #F7F7FE;
+$code-border-color: #E1E1E1;
+$code-font-size: 0.875rem;
+$code-line-height: 1.5;
 
-// Margins
-$margin-default: 1.5rem;
-$margin-form-group: 1.5rem;
-$margin-form-control: 0.5rem;
+///////////////////////////////
+/// FORMS
+///////////////////////////////
+
+// Form Groups
+$form-group-margin: 1.5rem;
+
+// Form Controls
+$form-control-color: $black;
+$form-control-color-focus: $black;
+$form-control-color-placeholder: $gray;
+$form-control-background-color: #FFFFFF;
+$form-control-border-color-focus: $blue;
+$form-control-border-radius: 3px;
+$form-control-font-family: $font-family-sans-serif;
+$form-control-line-height: 1.5;
+$form-control-margin: 0.5rem;
 
 // Form Toggles
 $form-toggle-height: 24px;
@@ -82,4 +123,16 @@ $form-toggle-width: 40px;
 $form-toggle-bg: #c3c5c4;
 $form-toggle-checked-bg: $color-primary;
 $form-toggle-circle-size: $form-toggle-height - 2;
-$form-toggle-top: ($font-size-body * 1.5 - $form-toggle-height) / 2;
+$form-toggle-top: ($font-size * 1.5 - $form-toggle-height) / 2;
+
+
+///////////////////////////////
+/// TABLES
+///////////////////////////////
+
+$table-background-color: #FFFFFF;
+$table-border-color: $silver;
+$table-cell-padding: 0.625rem;
+$table-line-height: $line-height;
+$table-margin: $margin;
+$table-th-font-weight: $font-weight-bold;
