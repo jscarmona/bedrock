@@ -2684,17 +2684,18 @@ a:active {
 
 blockquote {
   border-left: 5px solid #aaa;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  margin: 0 1.5rem 1rem;
   font-size: 1.125rem;
-  color: #aaa;
 }
 blockquote cite {
   font-size: 1rem;
-  color: #aaa;
 }
 blockquote cite:before {
   content: "— ";
+}
+blockquote p:first-of-type {
+  margin-top: 0;
 }
 
 hr {
