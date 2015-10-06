@@ -1,7 +1,8 @@
 @mixin cf() {
   *zoom: 1;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     display: table;
   }
@@ -33,4 +34,29 @@
   @include breakpoint($breakpoint, 'min') {
     @content;
   }
+}
+
+@mixin column($ratio, $gutter: $grid-gutter) {
+  width: column-width($ratio);
+  float: left;
+	min-height: 1px;
+	position: relative;
+	padding-left:  $gutter / 2;
+	padding-right: $gutter / 2;
+}
+
+@mixin push($ratio) {
+  left: column-width($ratio);
+}
+
+@mixin pull($ratio) {
+  right: column-width($ratio);
+}
+
+@mixin offset($ratio) {
+  margin-left: column-width($ratio);
+}
+
+@function column-width($ratio) {
+  @return unquote(($ratio * 100) + '%');
 }

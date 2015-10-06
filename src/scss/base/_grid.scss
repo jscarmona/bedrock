@@ -8,9 +8,10 @@
 }
 
 @for $i from 1 through $grid-columns {
-  .col--#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-  .col--push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-  .col--pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+  .col--#{$i} { @include column($i/$grid-columns); }
+  .col--offset-#{$i} { @include offset($i/$grid-columns); }
+  .col--push-#{$i} { @include push($i/$grid-columns); }
+  .col--pull-#{$i} { @include pull($i/$grid-columns); }
 }
 
 @include breakpointSmallerThan($breakpoint-sm) {
@@ -25,9 +26,10 @@
   }
 
   @for $i from 1 through $grid-columns {
-    .col--sm-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--sm-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--sm-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+    .col--sm-#{$i} { @include column($i/$grid-columns); }
+    .col--sm-offset-#{$i} { @include offset($i/$grid-columns); }
+    .col--sm-push-#{$i} { @include push($i/$grid-columns); }
+    .col--sm-pull-#{$i} { @include pull($i/$grid-columns); }
   }
 
   .col--sm-push-0 { left: 0; }
@@ -40,9 +42,10 @@
   }
 
   @for $i from 1 through $grid-columns {
-    .col--md-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--md-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--md-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+    .col--md-#{$i} { @include column($i/$grid-columns); }
+    .col--md-offset-#{$i} { @include offset($i/$grid-columns); }
+    .col--md-push-#{$i} { @include push($i/$grid-columns); }
+    .col--md-pull-#{$i} { @include pull($i/$grid-columns); }
   }
 
   .col--md-push-0 { left: 0; }
@@ -55,9 +58,10 @@
   }
 
   @for $i from 1 through $grid-columns {
-    .col--lg-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--lg-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--lg-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+    .col--lg-#{$i} { @include column($i/$grid-columns); }
+    .col--lg-offset-#{$i} { @include offset($i/$grid-columns); }
+    .col--lg-push-#{$i} { @include push($i/$grid-columns); }
+    .col--lg-pull-#{$i} { @include pull($i/$grid-columns); }
   }
 
   .col--lg-push-0 { left: 0; }
@@ -70,9 +74,10 @@
   }
 
   @for $i from 1 through $grid-columns {
-    .col--xl-#{$i} { @include column($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--xl-push-#{$i} { @include shift($i/$grid-columns, $gutter: $grid-gutter); }
-    .col--xl-pull-#{$i} { @include shift(-$i/$grid-columns, $gutter: $grid-gutter); }
+    .col--xl-#{$i} { @include column($i/$grid-columns); }
+    .col--xl-offset-#{$i} { @include offset($i/$grid-columns); }
+    .col--xl-push-#{$i} { @include push($i/$grid-columns); }
+    .col--xl-pull-#{$i} { @include pull($i/$grid-columns); }
   }
 
   .col--xl-push-0 { left: 0; }

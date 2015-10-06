@@ -1,6 +1,6 @@
 {
   "name": "bedrock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Javier Carmona <javierscarmona@gmail.com>"
   ],
@@ -14,15 +14,5 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "jeet": "~6.1.2",
-    "normalize-scss": "~3.0.3"
-  },
-  "overrides": {
-    "jeet": {
-      "main": [
-        "scss/jeet/*.scss"
-      ]
-    }
-  }
+  "dependencies": {}
 }

@@ -1,10 +1,10 @@
 #grid .row > [class^="col"] {
   font-size: 0.875rem;
-  padding: 1.125rem 0.3125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   color: #FFF;
   text-align: center;
   margin-bottom: 1rem;
-  border-radius: 4px;
 }
 
 #grid .row > [class^="col"]:nth-child(even) {

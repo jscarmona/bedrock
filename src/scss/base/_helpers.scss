@@ -16,29 +16,29 @@
 }
 
 @for $i from 1 through $grid-columns {
-  .width--#{$i} { width: column-width($i/$grid-columns, $gutter: $grid-gutter); }
+  .width--#{$i} { width: column-width($i/$grid-columns); }
 }
 
 @include breakpointLargerThan($breakpoint-sm) {
   @for $i from 1 through $grid-columns {
-    .width--sm-#{$i} { width: column-width($i/$grid-columns, $gutter: $grid-gutter); }
+    .width--sm-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
 @include breakpointLargerThan($breakpoint-md) {
   @for $i from 1 through $grid-columns {
-    .width--md-#{$i} { width: column-width($i/$grid-columns, $gutter: $grid-gutter); }
+    .width--md-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
 @include breakpointLargerThan($breakpoint-lg) {
   @for $i from 1 through $grid-columns {
-    .width--lg-#{$i} { width: column-width($i/$grid-columns, $gutter: $grid-gutter); }
+    .width--lg-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
 @include breakpointLargerThan($breakpoint-xl) {
   @for $i from 1 through $grid-columns {
-    .width--xl-#{$i} { width: column-width($i/$grid-columns, $gutter: $grid-gutter); }
+    .width--xl-#{$i} { width: column-width($i/$grid-columns); }
   }
 }

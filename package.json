@@ -7,7 +7,6 @@
     "gulp-if": "^1.2.5",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^1.0.5",
-    "main-bower-files": "^2.7.0"
+    "gulp-ruby-sass": "^1.0.5"
   }
 }

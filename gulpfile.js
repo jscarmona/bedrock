@@ -8,7 +8,6 @@ var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var sass = require('gulp-ruby-sass');
 var rename = require('gulp-rename');
-var bowerFiles = require('main-bower-files');
 var del = require('del');
 
 var env = 'dev';
@@ -19,11 +18,6 @@ gulp.task('clean:dist', function(cb) {
 
 gulp.task('clean:vendor', function(cb) {
   return del('src/vendor', cb);
-});
-
-gulp.task('copy:bower', ['clean:vendor'], function() {
-  return gulp.src(bowerFiles(), { base: './bower_components' })
-    .pipe(gulp.dest('src/vendor'));
 });
 
 gulp.task('css', function() {
