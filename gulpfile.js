@@ -1,3 +1,4 @@
+/* jshint node:true */
 /* globals require */
 'use strict';
 
@@ -12,15 +13,15 @@ var del = require('del');
 
 var env = 'dev';
 
-gulp.task('clean:dist', function (cb) {
+gulp.task('clean:dist', function(cb) {
   return del('dist', cb);
 });
 
-gulp.task('clean:vendor', function (cb) {
+gulp.task('clean:vendor', function(cb) {
   return del('src/vendor', cb);
 });
 
-gulp.task('copy:bower', [ 'clean:vendor' ], function() {
+gulp.task('copy:bower', ['clean:vendor'], function() {
   return gulp.src(bowerFiles(), { base: './bower_components' })
     .pipe(gulp.dest('src/vendor'));
 });
@@ -31,28 +32,28 @@ gulp.task('css', function() {
 
   return sass('src/scss/bedrock.scss', {
         style: isProd ? 'compressed' : 'expanded',
-        loadPath: 'src/vendor'
+        loadPath: 'src/vendor',
       })
       .on('error', notify.onError(function(err) {
         return 'CSS Error:' + err.message;
       }))
     .pipe(autoprefixer({
-        browsers: [ 'last 3 versions' ],
+        browsers: ['last 3 versions'],
         cascade: false,
-        remove: true
+        remove: true,
       }))
     .pipe(gulpif(isProd, rename({ suffix: '.min' })))
     .pipe(gulp.dest(destinationPath))
     .pipe(notify('CSS Success: <%= file.relative %>'));
 });
 
-gulp.task('build', [ 'clean:dist' ], function() {
+gulp.task('build', ['clean:dist'], function() {
   env = 'prod';
-  return gulp.start([ 'css' ]);
+  return gulp.start(['css']);
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/scss/**/*.scss', [ 'css' ]);
+  gulp.watch('src/scss/**/*.scss', ['css']);
 });
 
-gulp.task('default', [ 'css', 'watch' ]);
+gulp.task('default', ['css', 'watch']);
