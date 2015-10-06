@@ -1,3 +1,7 @@
+///////////////////////////////
+/// HELPERS
+///////////////////////////////
+
 @mixin cf() {
   *zoom: 1;
 
@@ -11,6 +15,10 @@
     clear: both;
   }
 }
+
+///////////////////////////////
+/// BREAKPOINTS
+///////////////////////////////
 
 @mixin breakpoint($breakpoint, $type: 'max') {
   @media (#{$type}-width: $breakpoint) {
@@ -36,13 +44,20 @@
   }
 }
 
+///////////////////////////////
+/// GRID
+///////////////////////////////
+
+@mixin make-column() {
+  min-height: 1px;
+  padding-left:  $grid-gutter / 2;
+  padding-right: $grid-gutter / 2;
+  position: relative;
+}
+
 @mixin column($ratio, $gutter: $grid-gutter) {
   width: column-width($ratio);
   float: left;
-	min-height: 1px;
-	position: relative;
-	padding-left:  $gutter / 2;
-	padding-right: $gutter / 2;
 }
 
 @mixin push($ratio) {
@@ -59,4 +74,44 @@
 
 @function column-width($ratio) {
   @return unquote(($ratio * 100) + '%');
+}
+
+
+///////////////////////////////
+/// FORMS
+///////////////////////////////
+
+@mixin select() {
+  background-color: $form-control-background-color;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+
+@mixin form__control--horizontal() {
+  @include make-column();
+  @include column(3/4);
+  @include push(1/4);
+
+  margin-bottom: 0;
+}
+
+@mixin form__label--horizontal() {
+  @include make-column();
+  @include column(1/4);
+
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+}
+
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder { color: $color; }
+  :-moz-placeholder { color: $color; }
+  ::-moz-placeholder { color: $color; }
+  :-ms-input-placeholder { color: $color; }
 }

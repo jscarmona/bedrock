@@ -441,15 +441,23 @@ th {
   padding: 0;
 }
 
-.form__group, .form__group--horizontal,
-.form__group--sm-horizontal,
-.form__group--md-horizontal,
-.form__group--lg-horizontal,
-.form__group--xl-horizontal,
-.form__group--error,
-.form__group--warning,
-.form__group--info,
-.form__group--success {
+::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+:-moz-placeholder {
+  color: #aaa;
+}
+
+::-moz-placeholder {
+  color: #aaa;
+}
+
+:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.form__group {
   margin-bottom: 1.5rem;
 }
 
@@ -504,12 +512,12 @@ th {
   border-color: #0074D9;
 }
 .form__group--horizontal .form__label, .form__group--horizontal .form__label--error {
-  width: 25%;
-  float: left;
   min-height: 1px;
-  position: relative;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
+  width: 25%;
+  float: left;
   text-align: right;
   position: absolute;
   top: 50%;
@@ -521,12 +529,12 @@ th {
 }
 @media (min-width: 480px) {
   .form__group--sm-horizontal .form__label, .form__group--sm-horizontal .form__label--error {
-    width: 25%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 25%;
+    float: left;
     text-align: right;
     position: absolute;
     top: 50%;
@@ -539,12 +547,12 @@ th {
 }
 @media (min-width: 768px) {
   .form__group--md-horizontal .form__label, .form__group--md-horizontal .form__label--error {
-    width: 25%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 25%;
+    float: left;
     text-align: right;
     position: absolute;
     top: 50%;
@@ -557,12 +565,12 @@ th {
 }
 @media (min-width: 970px) {
   .form__group--lg-horizontal .form__label, .form__group--lg-horizontal .form__label--error {
-    width: 25%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 25%;
+    float: left;
     text-align: right;
     position: absolute;
     top: 50%;
@@ -575,12 +583,12 @@ th {
 }
 @media (min-width: 1200px) {
   .form__group--xl-horizontal .form__label, .form__group--xl-horizontal .form__label--error {
-    width: 25%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 25%;
+    float: left;
     text-align: right;
     position: absolute;
     top: 50%;
@@ -703,12 +711,12 @@ input[type="time"].form__control, .form__group--horizontal
 input[type="url"].form__control, .form__group--horizontal
 select.form__control, .form__group--horizontal
 textarea.form__control {
-  width: 75%;
-  float: left;
   min-height: 1px;
-  position: relative;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
+  width: 75%;
+  float: left;
   left: 25%;
   margin-bottom: 0;
 }
@@ -725,12 +733,12 @@ textarea.form__control {
   input[type="url"].form__control, .form__group--sm-horizontal
   select.form__control, .form__group--sm-horizontal
   textarea.form__control {
-    width: 75%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 75%;
+    float: left;
     left: 25%;
     margin-bottom: 0;
   }
@@ -748,12 +756,12 @@ textarea.form__control {
   input[type="url"].form__control, .form__group--md-horizontal
   select.form__control, .form__group--md-horizontal
   textarea.form__control {
-    width: 75%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 75%;
+    float: left;
     left: 25%;
     margin-bottom: 0;
   }
@@ -771,12 +779,12 @@ textarea.form__control {
   input[type="url"].form__control, .form__group--lg-horizontal
   select.form__control, .form__group--lg-horizontal
   textarea.form__control {
-    width: 75%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 75%;
+    float: left;
     left: 25%;
     margin-bottom: 0;
   }
@@ -794,12 +802,12 @@ textarea.form__control {
   input[type="url"].form__control, .form__group--xl-horizontal
   select.form__control, .form__group--xl-horizontal
   textarea.form__control {
-    width: 75%;
-    float: left;
     min-height: 1px;
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    width: 75%;
+    float: left;
     left: 25%;
     margin-bottom: 0;
   }
@@ -870,22 +878,6 @@ select.form__control {
   border: 1px solid #0059a6;
 }
 
-::-webkit-input-placeholder {
-  color: #aaa;
-}
-
-:-moz-placeholder {
-  color: #aaa;
-}
-
-::-moz-placeholder {
-  color: #aaa;
-}
-
-:-ms-input-placeholder {
-  color: #aaa;
-}
-
 [type="search"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
@@ -913,6 +905,8 @@ select.form__control {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .row {
@@ -928,13 +922,16 @@ select.form__control {
   clear: both;
 }
 
+.col {
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
 .col--1 {
   width: 8.33333%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-1 {
@@ -952,10 +949,6 @@ select.form__control {
 .col--2 {
   width: 16.66667%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-2 {
@@ -973,10 +966,6 @@ select.form__control {
 .col--3 {
   width: 25%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-3 {
@@ -994,10 +983,6 @@ select.form__control {
 .col--4 {
   width: 33.33333%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-4 {
@@ -1015,10 +1000,6 @@ select.form__control {
 .col--5 {
   width: 41.66667%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-5 {
@@ -1036,10 +1017,6 @@ select.form__control {
 .col--6 {
   width: 50%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-6 {
@@ -1057,10 +1034,6 @@ select.form__control {
 .col--7 {
   width: 58.33333%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-7 {
@@ -1078,10 +1051,6 @@ select.form__control {
 .col--8 {
   width: 66.66667%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-8 {
@@ -1099,10 +1068,6 @@ select.form__control {
 .col--9 {
   width: 75%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-9 {
@@ -1120,10 +1085,6 @@ select.form__control {
 .col--10 {
   width: 83.33333%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-10 {
@@ -1141,10 +1102,6 @@ select.form__control {
 .col--11 {
   width: 91.66667%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-11 {
@@ -1162,10 +1119,6 @@ select.form__control {
 .col--12 {
   width: 100%;
   float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .col--offset-12 {
@@ -1182,21 +1135,17 @@ select.form__control {
 
 @media (max-width: 479px) {
   .container {
-    max-width: 95%;
+    max-width: 100%;
   }
 }
 @media (min-width: 480px) {
   .container {
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .col--sm-1 {
     width: 8.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-1 {
@@ -1214,10 +1163,6 @@ select.form__control {
   .col--sm-2 {
     width: 16.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-2 {
@@ -1235,10 +1180,6 @@ select.form__control {
   .col--sm-3 {
     width: 25%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-3 {
@@ -1256,10 +1197,6 @@ select.form__control {
   .col--sm-4 {
     width: 33.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-4 {
@@ -1277,10 +1214,6 @@ select.form__control {
   .col--sm-5 {
     width: 41.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-5 {
@@ -1298,10 +1231,6 @@ select.form__control {
   .col--sm-6 {
     width: 50%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-6 {
@@ -1319,10 +1248,6 @@ select.form__control {
   .col--sm-7 {
     width: 58.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-7 {
@@ -1340,10 +1265,6 @@ select.form__control {
   .col--sm-8 {
     width: 66.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-8 {
@@ -1361,10 +1282,6 @@ select.form__control {
   .col--sm-9 {
     width: 75%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-9 {
@@ -1382,10 +1299,6 @@ select.form__control {
   .col--sm-10 {
     width: 83.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-10 {
@@ -1403,10 +1316,6 @@ select.form__control {
   .col--sm-11 {
     width: 91.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-11 {
@@ -1424,10 +1333,6 @@ select.form__control {
   .col--sm-12 {
     width: 100%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--sm-offset-12 {
@@ -1458,10 +1363,6 @@ select.form__control {
   .col--md-1 {
     width: 8.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-1 {
@@ -1479,10 +1380,6 @@ select.form__control {
   .col--md-2 {
     width: 16.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-2 {
@@ -1500,10 +1397,6 @@ select.form__control {
   .col--md-3 {
     width: 25%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-3 {
@@ -1521,10 +1414,6 @@ select.form__control {
   .col--md-4 {
     width: 33.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-4 {
@@ -1542,10 +1431,6 @@ select.form__control {
   .col--md-5 {
     width: 41.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-5 {
@@ -1563,10 +1448,6 @@ select.form__control {
   .col--md-6 {
     width: 50%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-6 {
@@ -1584,10 +1465,6 @@ select.form__control {
   .col--md-7 {
     width: 58.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-7 {
@@ -1605,10 +1482,6 @@ select.form__control {
   .col--md-8 {
     width: 66.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-8 {
@@ -1626,10 +1499,6 @@ select.form__control {
   .col--md-9 {
     width: 75%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-9 {
@@ -1647,10 +1516,6 @@ select.form__control {
   .col--md-10 {
     width: 83.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-10 {
@@ -1668,10 +1533,6 @@ select.form__control {
   .col--md-11 {
     width: 91.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-11 {
@@ -1689,10 +1550,6 @@ select.form__control {
   .col--md-12 {
     width: 100%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--md-offset-12 {
@@ -1723,10 +1580,6 @@ select.form__control {
   .col--lg-1 {
     width: 8.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-1 {
@@ -1744,10 +1597,6 @@ select.form__control {
   .col--lg-2 {
     width: 16.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-2 {
@@ -1765,10 +1614,6 @@ select.form__control {
   .col--lg-3 {
     width: 25%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-3 {
@@ -1786,10 +1631,6 @@ select.form__control {
   .col--lg-4 {
     width: 33.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-4 {
@@ -1807,10 +1648,6 @@ select.form__control {
   .col--lg-5 {
     width: 41.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-5 {
@@ -1828,10 +1665,6 @@ select.form__control {
   .col--lg-6 {
     width: 50%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-6 {
@@ -1849,10 +1682,6 @@ select.form__control {
   .col--lg-7 {
     width: 58.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-7 {
@@ -1870,10 +1699,6 @@ select.form__control {
   .col--lg-8 {
     width: 66.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-8 {
@@ -1891,10 +1716,6 @@ select.form__control {
   .col--lg-9 {
     width: 75%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-9 {
@@ -1912,10 +1733,6 @@ select.form__control {
   .col--lg-10 {
     width: 83.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-10 {
@@ -1933,10 +1750,6 @@ select.form__control {
   .col--lg-11 {
     width: 91.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-11 {
@@ -1954,10 +1767,6 @@ select.form__control {
   .col--lg-12 {
     width: 100%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--lg-offset-12 {
@@ -1988,10 +1797,6 @@ select.form__control {
   .col--xl-1 {
     width: 8.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-1 {
@@ -2009,10 +1814,6 @@ select.form__control {
   .col--xl-2 {
     width: 16.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-2 {
@@ -2030,10 +1831,6 @@ select.form__control {
   .col--xl-3 {
     width: 25%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-3 {
@@ -2051,10 +1848,6 @@ select.form__control {
   .col--xl-4 {
     width: 33.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-4 {
@@ -2072,10 +1865,6 @@ select.form__control {
   .col--xl-5 {
     width: 41.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-5 {
@@ -2093,10 +1882,6 @@ select.form__control {
   .col--xl-6 {
     width: 50%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-6 {
@@ -2114,10 +1899,6 @@ select.form__control {
   .col--xl-7 {
     width: 58.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-7 {
@@ -2135,10 +1916,6 @@ select.form__control {
   .col--xl-8 {
     width: 66.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-8 {
@@ -2156,10 +1933,6 @@ select.form__control {
   .col--xl-9 {
     width: 75%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-9 {
@@ -2177,10 +1950,6 @@ select.form__control {
   .col--xl-10 {
     width: 83.33333%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-10 {
@@ -2198,10 +1967,6 @@ select.form__control {
   .col--xl-11 {
     width: 91.66667%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-11 {
@@ -2219,10 +1984,6 @@ select.form__control {
   .col--xl-12 {
     width: 100%;
     float: left;
-    min-height: 1px;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .col--xl-offset-12 {
@@ -2541,6 +2302,7 @@ dt {
 
 dd {
   margin: 0 0 1.5rem;
+  line-height: 1.7;
 }
 
 dl > dd:last-child {
@@ -2577,10 +2339,10 @@ dl > dd:last-child {
 }
 .list--inline > li {
   float: left;
-  margin: 0 0 0 1rem;
+  margin-right: 1rem;
 }
-.list--inline > li:first-child {
-  margin-left: 0;
+.list--inline > li:last-child {
+  margin-right: 0;
 }
 
 @media (min-width: 480px) {
@@ -2598,10 +2360,10 @@ dl > dd:last-child {
   }
   .list--sm-inline > li {
     float: left;
-    margin: 0 0 0 1rem;
+    margin-right: 1rem;
   }
-  .list--sm-inline > li:first-child {
-    margin-left: 0;
+  .list--sm-inline > li:last-child {
+    margin-right: 0;
   }
 }
 @media (min-width: 768px) {
@@ -2619,10 +2381,10 @@ dl > dd:last-child {
   }
   .list--md-inline > li {
     float: left;
-    margin: 0 0 0 1rem;
+    margin-right: 1rem;
   }
-  .list--md-inline > li:first-child {
-    margin-left: 0;
+  .list--md-inline > li:last-child {
+    margin-right: 0;
   }
 }
 @media (min-width: 970px) {
@@ -2640,10 +2402,10 @@ dl > dd:last-child {
   }
   .list--lg-inline > li {
     float: left;
-    margin: 0 0 0 1rem;
+    margin-right: 1rem;
   }
-  .list--lg-inline > li:first-child {
-    margin-left: 0;
+  .list--lg-inline > li:last-child {
+    margin-right: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -2661,10 +2423,10 @@ dl > dd:last-child {
   }
   .list--xl-inline > li {
     float: left;
-    margin: 0 0 0 1rem;
+    margin-right: 1rem;
   }
-  .list--xl-inline > li:first-child {
-    margin-left: 0;
+  .list--xl-inline > li:last-child {
+    margin-right: 0;
   }
 }
 * {
@@ -2683,6 +2445,10 @@ body {
 body.no-scroll {
   overflow: hidden;
   height: 100%;
+}
+
+.table__container {
+  overflow-x: scroll;
 }
 
 .table {

@@ -1,3 +1,7 @@
+.table__container {
+  overflow-x: scroll;
+}
+
 .table {
   width: 100%;
   max-width: 100%;
@@ -142,4 +146,3 @@
     }
   }
 }
-

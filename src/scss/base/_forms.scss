@@ -1,34 +1,6 @@
-@mixin select() {
-  background-color: $form-control-background-color;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSczNicgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDIwIDIwJz48cGF0aCBkPSdNMTcuNDE4IDYuMTA5YzAuMjcyLTAuMjY4IDAuNzA5LTAuMjY4IDAuOTc5IDBzMC4yNzEgMC43MDEgMCAwLjk2OWwtNy45MDggNy44M2MtMC4yNyAwLjI2OC0wLjcwNyAwLjI2OC0wLjk3OSAwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEgMC0wLjk2OXMwLjcwOS0wLjI2OCAwLjk3OSAwbDcuNDE5IDcuMTQxIDcuNDE4LTcuMTQxeicgZmlsbD0nIzQ0NDQ0NCc+PC9wYXRoPjwvc3ZnPg==);
-  background-repeat: no-repeat;
-  background-position: right center;
-  padding-right: 36px;
-}
+@include placeholder($form-control-color-placeholder);
 
-@mixin form__control--horizontal() {
-  @include column(3/4);
-  @include push(1/4);
-
-  margin-bottom: 0;
-}
-
-@mixin form__label--horizontal() {
-    @include column(1/4);
-
-    text-align: right;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    margin-bottom: 0;
-}
-
-.form__group,
-.form__group--error,
-.form__group--warning,
-.form__group--info,
-.form__group--success {
+.form__group {
   margin-bottom: $form-group-margin;
 }
 
@@ -37,7 +9,6 @@
 .form__group--md-horizontal,
 .form__group--lg-horizontal,
 .form__group--xl-horizontal {
-  @extend .form__group;
   @include cf();
 
   position: relative;
@@ -237,11 +208,6 @@ select.form__control {
     border: 1px solid darken($form-toggle-checked-bg, 10);
   }
 }
-
-::-webkit-input-placeholder { color: $form-control-color-placeholder; }
-:-moz-placeholder { color: $form-control-color-placeholder; }
-::-moz-placeholder { color: $form-control-color-placeholder; }
-:-ms-input-placeholder { color: $form-control-color-placeholder; }
 
 // Fix for input type search
 [type="search"] {

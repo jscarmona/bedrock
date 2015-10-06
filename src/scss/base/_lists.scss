@@ -12,10 +12,10 @@
 
   > li {
     float: left;
-    margin: 0 0 0 1rem;
+    margin-right: 1rem;
 
-    &:first-child {
-      margin-left: 0;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -51,6 +51,7 @@ dt {
 
 dd {
   margin: 0 0 $margin;
+  line-height: $line-height;
 }
 
 dl > dd:last-child {
