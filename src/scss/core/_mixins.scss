@@ -48,11 +48,21 @@
 /// GRID
 ///////////////////////////////
 
-@mixin make-column() {
-  min-height: 1px;
-  padding-left:  $grid-gutter / 2;
-  padding-right: $grid-gutter / 2;
-  position: relative;
+@mixin create-columns($size: null) {
+  @if ($size) {
+    $size: $size + '-';
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col--#{$size}#{$i} { @include column($i/$grid-columns); }
+    .col--#{$size}offset-#{$i} { @include offset($i/$grid-columns); }
+    .col--#{$size}push-#{$i} { @include push($i/$grid-columns); }
+    .col--#{$size}pull-#{$i} { @include pull($i/$grid-columns); }
+  }
+
+  .col--#{$size}push-0 { left: 0; }
+  .col--#{$size}pull-0 { right: 0; }
+  .col--#{$size}offset-0 { margin-left: 0; }
 }
 
 @mixin column($ratio, $gutter: $grid-gutter) {
@@ -70,6 +80,11 @@
 
 @mixin offset($ratio) {
   margin-left: column-width($ratio);
+}
+
+@mixin grid-gutter($gutter: $grid-gutter) {
+  padding-left:  $gutter / 2;
+  padding-right: $gutter / 2;
 }
 
 @function column-width($ratio) {
@@ -90,21 +105,20 @@
 }
 
 @mixin form__control--horizontal() {
-  @include make-column();
-  @include column(3/4);
   @include push(1/4);
 
+  position: relative;
+  width: column-width(3/4);
   margin-bottom: 0;
 }
 
 @mixin form__label--horizontal() {
-  @include make-column();
-  @include column(1/4);
-
   text-align: right;
   position: absolute;
   top: 50%;
   left: 0;
+  width: column-width(1/4);
+  padding-right: 0.9375rem;
   transform: translateY(-50%);
   margin-bottom: 0;
 }

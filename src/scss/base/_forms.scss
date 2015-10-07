@@ -9,8 +9,6 @@
 .form__group--md-horizontal,
 .form__group--lg-horizontal,
 .form__group--xl-horizontal {
-  @include cf();
-
   position: relative;
 }
 
