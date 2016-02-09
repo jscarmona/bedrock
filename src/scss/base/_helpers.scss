@@ -19,25 +19,25 @@
   .width--#{$i} { width: column-width($i/$grid-columns); }
 }
 
-@include breakpointLargerThan($breakpoint-sm) {
+@include breakpoint-larger($breakpoint-sm) {
   @for $i from 1 through $grid-columns {
     .width--sm-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
-@include breakpointLargerThan($breakpoint-md) {
+@include breakpoint-larger($breakpoint-md) {
   @for $i from 1 through $grid-columns {
     .width--md-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
-@include breakpointLargerThan($breakpoint-lg) {
+@include breakpoint-larger($breakpoint-lg) {
   @for $i from 1 through $grid-columns {
     .width--lg-#{$i} { width: column-width($i/$grid-columns); }
   }
 }
 
-@include breakpointLargerThan($breakpoint-xl) {
+@include breakpoint-larger($breakpoint-xl) {
   @for $i from 1 through $grid-columns {
     .width--xl-#{$i} { width: column-width($i/$grid-columns); }
   }

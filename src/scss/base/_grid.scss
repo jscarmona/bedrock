@@ -4,23 +4,23 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include breakpointSmallerThan($breakpoint-sm) {
+  @include breakpoint-smaller($breakpoint-sm) {
     max-width: $container-width;
   }
 
-  @include breakpointLargerThan($breakpoint-sm) {
+  @include breakpoint-larger($breakpoint-sm) {
     max-width: $container-width-sm;
   }
 
-  @include breakpointLargerThan($breakpoint-md) {
+  @include breakpoint-larger($breakpoint-md) {
     max-width: $container-width-md;
   }
 
-  @include breakpointLargerThan($breakpoint-lg) {
+  @include breakpoint-larger($breakpoint-lg) {
     max-width: $container-width-lg;
   }
 
-  @include breakpointLargerThan($breakpoint-xl) {
+  @include breakpoint-larger($breakpoint-xl) {
     max-width: $container-width-xl;
   }
 }
@@ -41,18 +41,18 @@
 
 @include create-columns();
 
-@include breakpointLargerThan($breakpoint-sm) {
+@include breakpoint-larger($breakpoint-sm) {
   @include create-columns(sm);
 }
 
-@include breakpointLargerThan($breakpoint-md) {
+@include breakpoint-larger($breakpoint-md) {
   @include create-columns(md);
 }
 
-@include breakpointLargerThan($breakpoint-lg) {
+@include breakpoint-larger($breakpoint-lg) {
   @include create-columns(lg);
 }
 
-@include breakpointLargerThan($breakpoint-xl) {
+@include breakpoint-larger($breakpoint-xl) {
   @include create-columns(xl);
 }

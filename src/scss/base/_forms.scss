@@ -40,19 +40,19 @@
 
   .form__group--horizontal & { @include form__label--horizontal(); }
 
-  @include breakpointLargerThan($breakpoint-sm) {
+  @include breakpoint-larger($breakpoint-sm) {
     .form__group--sm-horizontal & { @include form__label--horizontal(); }
   }
 
-  @include breakpointLargerThan($breakpoint-md) {
+  @include breakpoint-larger($breakpoint-md) {
     .form__group--md-horizontal & { @include form__label--horizontal(); }
   }
 
-  @include breakpointLargerThan($breakpoint-lg) {
+  @include breakpoint-larger($breakpoint-lg) {
     .form__group--lg-horizontal & { @include form__label--horizontal(); }
   }
 
-  @include breakpointLargerThan($breakpoint-xl) {
+  @include breakpoint-larger($breakpoint-xl) {
     .form__group--xl-horizontal & { @include form__label--horizontal(); }
   }
 }
@@ -113,19 +113,19 @@ textarea {
 
     .form__group--horizontal & { @include form__control--horizontal(); }
 
-    @include breakpointLargerThan($breakpoint-sm) {
+    @include breakpoint-larger($breakpoint-sm) {
       .form__group--sm-horizontal & { @include form__control--horizontal(); }
     }
 
-    @include breakpointLargerThan($breakpoint-md) {
+    @include breakpoint-larger($breakpoint-md) {
       .form__group--md-horizontal & { @include form__control--horizontal(); }
     }
 
-    @include breakpointLargerThan($breakpoint-lg) {
+    @include breakpoint-larger($breakpoint-lg) {
       .form__group--lg-horizontal & { @include form__control--horizontal(); }
     }
 
-    @include breakpointLargerThan($breakpoint-xl) {
+    @include breakpoint-larger($breakpoint-xl) {
       .form__group--xl-horizontal & { @include form__control--horizontal(); }
     }
   }

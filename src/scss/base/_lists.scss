@@ -74,25 +74,25 @@ dl > dd:last-child {
   @include list--inline();
 }
 
-@include breakpointLargerThan($breakpoint-sm) {
+@include breakpoint-larger($breakpoint-sm) {
   .list--sm-inline {
     @include list--inline();
   }
 }
 
-@include breakpointLargerThan($breakpoint-md) {
+@include breakpoint-larger($breakpoint-md) {
   .list--md-inline {
     @include list--inline();
   }
 }
 
-@include breakpointLargerThan($breakpoint-lg) {
+@include breakpoint-larger($breakpoint-lg) {
   .list--lg-inline {
     @include list--inline();
   }
 }
 
-@include breakpointLargerThan($breakpoint-xl) {
+@include breakpoint-larger($breakpoint-xl) {
   .list--xl-inline {
     @include list--inline();
   }
