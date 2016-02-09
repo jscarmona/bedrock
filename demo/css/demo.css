@@ -16,7 +16,8 @@
 }
 
 .bedrock-section {
-    margin-bottom: 5em;
+    max-width: 95%;
+    margin: 0 auto 5em;
 }
 
 .bedrock-subsection {

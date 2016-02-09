@@ -843,8 +843,6 @@ select.form__control {
   }
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -872,6 +870,19 @@ select.form__control {
   .container {
     max-width: 1140px;
   }
+}
+
+.container--grid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container--scrollable-x {
+  overflow-x: scroll;
+}
+
+.container--scrollable-y {
+  overflow-y: scroll;
 }
 
 .row {
@@ -2417,10 +2428,6 @@ body {
 body.no-scroll {
   overflow: hidden;
   height: 100%;
-}
-
-.table__container {
-  overflow-x: scroll;
 }
 
 .table {

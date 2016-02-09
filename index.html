@@ -10,89 +10,93 @@
   <link rel="stylesheet" type="text/css" href="demo/css/demo.css" />
 </head>
 <body>
-  <div class="container text--center">
+  <div class="container container--grid text--center">
     <h1>Bedrock CSS Micro-Framework</h1>
     <p>A small CSS framework that gets you started with minimal effort. It follows the B.E.M. model.</p>
   </div>
 
-  <div class="bedrock-section container" id="grid">
+  <div class="bedrock-section" id="grid">
     <h1 class="bedrock-section-title">Grid</h1>
 
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Default</h2>
       <div class="bedrock-subsection-content">
-        <div class="row">
-          <div class="col col--xl-1"><div>1</div></div>
-          <div class="col col--xl-11"><div>11</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--lg-2"><div>2</div></div>
-          <div class="col col--lg-10"><div>10</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--md-3"><div>3</div></div>
-          <div class="col col--md-9"><div>9</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--md-4"><div>4</div></div>
-          <div class="col col--md-8"><div>8</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--sm-5"><div>5</div></div>
-          <div class="col col--sm-7"><div>7</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--6"><div>6</div></div>
-          <div class="col col--6"><div>6</div></div>
-        </div>
-        <div class="row">
-          <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-          <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-          <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-          <div class="col col--sm-6 col--md-8 col--lg-3"><div>-</div></div>
+        <div class="container container--grid">
+          <div class="row">
+            <div class="col col--xl-1"><div>1</div></div>
+            <div class="col col--xl-11"><div>11</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--lg-2"><div>2</div></div>
+            <div class="col col--lg-10"><div>10</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--md-3"><div>3</div></div>
+            <div class="col col--md-9"><div>9</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--md-4"><div>4</div></div>
+            <div class="col col--md-8"><div>8</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--sm-5"><div>5</div></div>
+            <div class="col col--sm-7"><div>7</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--6"><div>6</div></div>
+            <div class="col col--6"><div>6</div></div>
+          </div>
+          <div class="row">
+            <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+            <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+            <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+            <div class="col col--sm-6 col--md-8 col--lg-3"><div>-</div></div>
 
-          <div class="col col--sm-6 col--md-4 col--lg-2 col--lg-offset-1"><div>-</div></div>
-          <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
-          <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
-          <div class="col col--sm-6 col--md-12 col--lg-2 col--lg-offset-1"><div>-</div></div>
+            <div class="col col--sm-6 col--md-4 col--lg-2 col--lg-offset-1"><div>-</div></div>
+            <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
+            <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
+            <div class="col col--sm-6 col--md-12 col--lg-2 col--lg-offset-1"><div>-</div></div>
+          </div>
         </div>
       </div>
       <div class="bedrock-subsection-code">
         <pre><code class="html" data-code>
-<div class="row">
-  <div class="col col--xl-1"><div>1</div></div>
-  <div class="col col--xl-11"><div>11</div></div>
-</div>
-<div class="row">
-  <div class="col col--lg-2"><div>2</div></div>
-  <div class="col col--lg-10"><div>10</div></div>
-</div>
-<div class="row">
-  <div class="col col--md-3"><div>3</div></div>
-  <div class="col col--md-9"><div>9</div></div>
-</div>
-<div class="row">
-  <div class="col col--md-4"><div>4</div></div>
-  <div class="col col--md-8"><div>8</div></div>
-</div>
-<div class="row">
-  <div class="col col--sm-5"><div>5</div></div>
-  <div class="col col--sm-7"><div>7</div></div>
-</div>
-<div class="row">
-  <div class="col col--6"><div>6</div></div>
-  <div class="col col--6"><div>6</div></div>
-</div>
-<div class="row">
-  <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-  <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-  <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
-  <div class="col col--sm-6 col--md-8 col--lg-3"><div>-</div></div>
+<div class="container container--grid">
+  <div class="row">
+    <div class="col col--xl-1"><div>1</div></div>
+    <div class="col col--xl-11"><div>11</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--lg-2"><div>2</div></div>
+    <div class="col col--lg-10"><div>10</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--md-3"><div>3</div></div>
+    <div class="col col--md-9"><div>9</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--md-4"><div>4</div></div>
+    <div class="col col--md-8"><div>8</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--sm-5"><div>5</div></div>
+    <div class="col col--sm-7"><div>7</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--6"><div>6</div></div>
+    <div class="col col--6"><div>6</div></div>
+  </div>
+  <div class="row">
+    <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+    <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+    <div class="col col--sm-6 col--md-4 col--lg-3"><div>-</div></div>
+    <div class="col col--sm-6 col--md-8 col--lg-3"><div>-</div></div>
 
-  <div class="col col--sm-6 col--md-4 col--lg-2 col--lg-offset-1"><div>-</div></div>
-  <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
-  <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
-  <div class="col col--sm-6 col--md-12 col--lg-2 col--lg-offset-1"><div>-</div></div>
+    <div class="col col--sm-6 col--md-4 col--lg-2 col--lg-offset-1"><div>-</div></div>
+    <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
+    <div class="col col--sm-6 col--md-6 col--lg-2 col--lg-offset-1"><div>-</div></div>
+    <div class="col col--sm-6 col--md-12 col--lg-2 col--lg-offset-1"><div>-</div></div>
+  </div>
 </div>
         </code></pre>
       </div>
@@ -101,33 +105,37 @@
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Push/Pull</h2>
       <div class="bedrock-subsection-content">
-        <div class="row">
-          <div class="col col--md-3 col--md-push-9"><div>1</div></div>
-          <div class="col col--md-9 col--md-pull-3"><div>2</div></div>
-        </div>
+        <div class="container container--grid">
+          <div class="row">
+            <div class="col col--md-3 col--md-push-9"><div>1</div></div>
+            <div class="col col--md-9 col--md-pull-3"><div>2</div></div>
+          </div>
 
-        <div class="row">
-          <div class="col col--sm-2 col--sm-push-1 col--md-6 col--md-push-0"><div>1</div></div>
-          <div class="col col--sm-8 col--sm-push-1 col--md-6 col--md-push-0"><div>2</div></div>
+          <div class="row">
+            <div class="col col--sm-2 col--sm-push-1 col--md-6 col--md-push-0"><div>1</div></div>
+            <div class="col col--sm-8 col--sm-push-1 col--md-6 col--md-push-0"><div>2</div></div>
+          </div>
         </div>
       </div>
       <div class="bedrock-subsection-code">
         <pre><code class="html" data-code>
-<div class="row">
-  <div class="col col--md-3 col--md-push-9"><div>1</div></div>
-  <div class="col col--md-9 col--md-pull-3"><div>2</div></div>
-</div>
+<div class="container container--grid">
+  <div class="row">
+    <div class="col col--md-3 col--md-push-9"><div>1</div></div>
+    <div class="col col--md-9 col--md-pull-3"><div>2</div></div>
+  </div>
 
-<div class="row">
-  <div class="col col--sm-2 col--sm-push-1 col--md-6 col--md-push-0"><div>1</div></div>
-  <div class="col col--sm-8 col--sm-push-1 col--md-6 col--md-push-0"><div>2</div></div>
+  <div class="row">
+    <div class="col col--sm-2 col--sm-push-1 col--md-6 col--md-push-0"><div>1</div></div>
+    <div class="col col--sm-8 col--sm-push-1 col--md-6 col--md-push-0"><div>2</div></div>
+  </div>
 </div>
         </code></pre>
       </div>
     </div>
   </div>
 
-  <div class="bedrock-section container" id="typography">
+  <div class="bedrock-section" id="typography">
     <h1 class="bedrock-section-title">Typography</h1>
 
     <div class="bedrock-subsection">
@@ -290,7 +298,7 @@
     </div>
   </div>
 
-  <div class="bedrock-section container" id="lists">
+  <div class="bedrock-section" id="lists">
     <h1 class="bedrock-section-title">Lists</h1>
 
     <div class="bedrock-subsection">
@@ -519,7 +527,7 @@
   </div>
 
 
-  <div class="bedrock-section container" id="forms">
+  <div class="bedrock-section" id="forms">
     <h1 class="bedrock-section-title">Forms</h1>
 
     <div class="bedrock-subsection">
@@ -833,13 +841,13 @@
     </div>
   </div>
 
-  <div class="bedrock-section container" id="typography">
+  <div class="bedrock-section" id="typography">
     <h1 class="bedrock-section-title">Tables</h1>
 
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Table Stripe</h2>
       <div class="bedrock-subsection-content">
-        <div class="table__container">
+        <div class="container container--scrollable-x">
           <table class="table table--stripe">
             <thead>
               <tr>
@@ -877,7 +885,7 @@
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Table Condense</h2>
       <div class="bedrock-subsection-content">
-        <div class="table__container">
+        <div class="container container--scrollable-x">
           <table class="table table--condense">
             <thead>
               <tr>
@@ -915,7 +923,7 @@
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Table Border</h2>
       <div class="bedrock-subsection-content">
-        <div class="table__container">
+        <div class="container container--scrollable-x">
           <table class="table table--border">
             <thead>
               <tr>
@@ -953,7 +961,7 @@
     <div class="bedrock-subsection">
       <h2 class="bedrock-subsection-title">Table Hover</h2>
       <div class="bedrock-subsection-content">
-        <div class="table__container">
+        <div class="container container--scrollable-x">
           <table class="table table--hover">
             <thead>
               <tr>
@@ -989,7 +997,7 @@
       </div>
       <div class="bedrock-subsection-code">
         <pre><code class="html" data-code>
-<div class="table__container">
+<div class="container container--scrollable-x">
   <table class="table table--border table--condense table--hover table--stripe">
     <thead>
       <tr>
