@@ -29,7 +29,13 @@ $black: #111 !default;
 /// FONT FAMILIES
 ///////////////////////////////
 
-$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif !default;
+$useLato: true !default;
+$font-family-sans-serif: null !default;
+@if $useLato {
+  $font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif !default;
+} @else {
+  $font-family-sans-serif: "Helvetica Neue", Arial, sans-serif !default;
+}
 $font-family-serif: Georgia, "Times New", serif !default;
 $font-family-monospace: Menlo, Consolas, "Courier New", monospace !default;
 $font-family-headings: $font-family-sans-serif !default;
