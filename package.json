@@ -1,12 +1,43 @@
 {
-  "private": true,
+  "name": "bedrock-css",
+  "version": "0.0.1",
+  "description": "A micro css framework",
+  "main": "src/scss/bedrock.scss",
+  "dependencies": {},
   "devDependencies": {
     "del": "^1.1.1",
+    "ghooks": "1.0.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-if": "^1.2.5",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscarmona/bedrock.git"
+  },
+  "keywords": [
+    "micro",
+    "css",
+    "framework"
+  ],
+  "author": "Javier Carmona <javierscarmona@gmail.com> (http://ten13media.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jscarmona/bedrock/issues"
+  },
+  "homepage": "https://github.com/jscarmona/bedrock#readme",
+  "config": {
+    "ghooks": {
+      "pre-push": "gulp build",
+      "post-merge": "gulp css",
+      "post-rewrite": "gulp css"
+    }
   }
 }
