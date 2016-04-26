@@ -3,140 +3,140 @@
 ///////////////////////////////
 
 // Cool
-$aqua: #7FDBFF;
-$blue: #0074D9;
-$navy: #001F3F;
-$teal: #39CCCC;
-$green: #2ECC40;
-$olive: #3D9970;
-$lime: #01FF70;
+$aqua: #7FDBFF !default;
+$blue: #0074D9 !default;
+$navy: #001F3F !default;
+$teal: #39CCCC !default;
+$green: #2ECC40 !default;
+$olive: #3D9970 !default;
+$lime: #01FF70 !default;
 
 // Warm
-$yellow: #FFDC00;
-$orange: #FF851B;
-$red: #FF4136;
-$fuchsia: #F012BE;
-$purple: #B10DC9;
-$maroon: #85144B;
+$yellow: #FFDC00 !default;
+$orange: #FF851B !default;
+$red: #FF4136 !default;
+$fuchsia: #F012BE !default;
+$purple: #B10DC9 !default;
+$maroon: #85144B !default;
 
 // Gray Scale
-$white: #fff;
-$silver: #ddd;
-$gray: #aaa;
-$black: #111;
+$white: #fff !default;
+$silver: #ddd !default;
+$gray: #aaa !default;
+$black: #111 !default;
 
 ///////////////////////////////
 /// FONT FAMILIES
 ///////////////////////////////
 
-$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif: Georgia, "Times New", serif;
-$font-family-monospace: Menlo, Consolas, "Courier New", monospace;
-$font-family-headings: $font-family-sans-serif;
+$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New", serif !default;
+$font-family-monospace: Menlo, Consolas, "Courier New", monospace !default;
+$font-family-headings: $font-family-sans-serif !default;
 
 ///////////////////////////////
 /// COMMON
 ///////////////////////////////
 
-$background-color: $white;
-$background-color-selection: #2980B9;
-$border-color: $gray;
-$font-family: $font-family-sans-serif;
-$font-size: 16px;
-$line-height: 1.7;
-$margin: 1.5rem;
-$transition-time: 0.2s;
+$background-color: $white !default;
+$background-color-selection: #2980B9 !default;
+$border-color: $gray !default;
+$font-family: $font-family-sans-serif !default;
+$font-size: 16px !default;
+$line-height: 1.7 !default;
+$margin: 1.5rem !default;
+$transition-time: 0.2s !default;
 
 // Colors
-$color: $black;
-$color-primary: $blue;
-$color-selection: $white;
-$color-success: #1BBC9B;
-$color-warning: #F1C000;
-$color-error: #E74C3C;
-$color-info: $blue;
-$color-diff: #151515;
+$color: $black !default;
+$color-primary: $blue !default;
+$color-selection: $white !default;
+$color-success: #1BBC9B !default;
+$color-warning: #F1C000 !default;
+$color-error: #E74C3C !default;
+$color-info: $blue !default;
+$color-diff: #151515 !default;
 
 // Breakpoints
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 970px;
-$breakpoint-xl: 1200px;
+$breakpoint-sm: 480px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 970px !default;
+$breakpoint-xl: 1200px !default;
 
 // Containers
-$container-width-sm: 100%;
-$container-width-md: 100%;
-$container-width-lg: 960px;
-$container-width-xl: 1140px;
-$container-width: $container-width-sm;
+$container-width-sm: 100% !default;
+$container-width-md: 100% !default;
+$container-width-lg: 960px !default;
+$container-width-xl: 1140px !default;
+$container-width: $container-width-sm !default;
 
 // Font Weights
-$font-weight-thin: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
+$font-weight-thin: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
 
 // Grid
-$grid-columns: 12;
-$grid-gutter: 30px; // 1140 / 30
+$grid-columns: 12 !default;
+$grid-gutter: 30px !default; // 1140 / 30
 
 ///////////////////////////////
 /// TYPOGRAPHY
 ///////////////////////////////
 
 // Headings
-$headings-small-color: $gray;
+$headings-small-color: $gray !default;
 
 // Mark
-$mark-color: $yellow;
+$mark-color: $yellow !default;
 
 // Blockquote
-$blockquote-border-color: $gray;
+$blockquote-border-color: $gray !default;
 
 // Code
-$code-color: #333;
-$code-background-color: #F7F7FE;
-$code-border-color: #E1E1E1;
-$code-font-size: 0.875rem;
-$code-line-height: 1.5;
+$code-color: #333 !default;
+$code-background-color: #F7F7FE !default;
+$code-border-color: #E1E1E1 !default;
+$code-font-size: 0.875rem !default;
+$code-line-height: 1.5 !default;
 
 ///////////////////////////////
 /// FORMS
 ///////////////////////////////
 
 // Form Groups
-$form-group-margin: 1.5rem;
+$form-group-margin: 1.5rem !default;
 
 // Form Controls
-$form-control-color: $black;
-$form-control-color-focus: $black;
-$form-control-color-placeholder: $gray;
-$form-control-background-color: #FFFFFF;
-$form-control-border-color-focus: $blue;
-$form-control-border-radius: 3px;
-$form-control-font-family: $font-family-sans-serif;
-$form-control-line-height: 1.5;
-$form-control-margin: 0.5rem;
+$form-control-color: $black !default;
+$form-control-color-focus: $black !default;
+$form-control-color-placeholder: $gray !default;
+$form-control-background-color: #FFFFFF !default;
+$form-control-border-color-focus: $blue !default;
+$form-control-border-radius: 3px !default;
+$form-control-font-family: $font-family-sans-serif !default;
+$form-control-line-height: 1.5 !default;
+$form-control-margin: 0.5rem !default;
 
 // Form Toggles
-$form-toggle-height: 24px;
-$form-toggle-width: 40px;
-$form-toggle-bg: #c3c5c4;
-$form-toggle-checked-bg: $color-primary;
-$form-toggle-circle-size: $form-toggle-height - 2;
-$form-toggle-top: ($font-size * 1.5 - $form-toggle-height) / 2;
+$form-toggle-height: 24px !default;
+$form-toggle-width: 40px !default;
+$form-toggle-bg: #c3c5c4 !default;
+$form-toggle-checked-bg: $color-primary !default;
+$form-toggle-circle-size: $form-toggle-height - 2 !default;
+$form-toggle-top: ($font-size * 1.5 - $form-toggle-height) / 2 !default;
 
 
 ///////////////////////////////
 /// TABLES
 ///////////////////////////////
 
-$table-background-color: #FFFFFF;
-$table-border-color: $silver;
-$table-border-radius: 3px;
-$table-cell-padding: 0.625rem;
-$table-line-height: $line-height;
-$table-margin: $margin;
-$table-th-font-weight: $font-weight-bold;
-$table-background-hover: $blue;
-$table-color-hover: $white;
-$table-row-background-color: #F8F8F8;
+$table-background-color: #FFFFFF !default;
+$table-border-color: $silver !default;
+$table-border-radius: 3px !default;
+$table-cell-padding: 0.625rem !default;
+$table-line-height: $line-height !default;
+$table-margin: $margin !default;
+$table-th-font-weight: $font-weight-bold !default;
+$table-background-hover: $blue !default;
+$table-color-hover: $white !default;
+$table-row-background-color: #F8F8F8 !default;
