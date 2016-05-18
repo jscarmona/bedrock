@@ -111,11 +111,14 @@ $form-control-color: $black !default;
 $form-control-color-focus: $black !default;
 $form-control-color-placeholder: $gray !default;
 $form-control-background-color: #FFFFFF !default;
+$form-control-border-color: $border-color !default;
 $form-control-border-color-focus: $blue !default;
+$form-control-border-size: 2px !default;
 $form-control-border-radius: 3px !default;
 $form-control-font-family: $font-family-sans-serif !default;
 $form-control-line-height: 1.5 !default;
 $form-control-margin: 0.5rem !default;
+$form-control-height: 2.625rem !default;
 
 // Form Toggles
 $form-toggle-height: 24px !default;

@@ -61,73 +61,60 @@
   @extend .form__label;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-select,
-textarea {
-  &.form__control {
-    height: 2.625rem;
-    width: 100%;
-    max-width: 100%;
-    padding: 0.5rem;
-    font-family: $form-control-font-family;
-    font-weight: $font-weight-regular;
-    color: $form-control-color;
-    font-size: 1rem;
-    border: 2px solid $border-color;
-    border-radius: $form-control-border-radius;
-    background-color: $form-control-background-color;
-    transition: border-color $transition-time, color $transition-time;
-    -webkit-font-smoothing: antialiased;
-    -webkit-appearance: none;
+.form__control {
+  height: $form-control-height;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+  font-family: $form-control-font-family;
+  font-weight: $font-weight-regular;
+  color: $form-control-color;
+  font-size: 1rem;
+  border: $form-control-border-size solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
+  background-color: $form-control-background-color;
+  transition: border-color $transition-time, color $transition-time;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
 
-    &:focus {
-      border-color: $form-control-border-color-focus;
-      color: $form-control-color-focus;
-      outline: none;
-    }
+  &:focus {
+    border-color: $form-control-border-color-focus;
+    color: $form-control-color-focus;
+    outline: none;
+  }
 
-    .form__group--error & {
-      border-color: $color-error;
-    }
+  .form__group--error & {
+    border-color: $color-error;
+  }
 
-    .form__group--warning & {
-      border-color: $color-warning;
-    }
+  .form__group--warning & {
+    border-color: $color-warning;
+  }
 
-    .form__group--success & {
-      border-color: $color-success;
-    }
+  .form__group--success & {
+    border-color: $color-success;
+  }
 
-    .form__group--info & {
-      border-color: $color-info;
-    }
+  .form__group--info & {
+    border-color: $color-info;
+  }
 
-    .form__group--horizontal & { @include form__control--horizontal(); }
+  .form__group--horizontal & { @include form__control--horizontal(); }
 
-    @include breakpoint-larger($breakpoint-sm) {
-      .form__group--sm-horizontal & { @include form__control--horizontal(); }
-    }
+  @include breakpoint-larger($breakpoint-sm) {
+    .form__group--sm-horizontal & { @include form__control--horizontal(); }
+  }
 
-    @include breakpoint-larger($breakpoint-md) {
-      .form__group--md-horizontal & { @include form__control--horizontal(); }
-    }
+  @include breakpoint-larger($breakpoint-md) {
+    .form__group--md-horizontal & { @include form__control--horizontal(); }
+  }
 
-    @include breakpoint-larger($breakpoint-lg) {
-      .form__group--lg-horizontal & { @include form__control--horizontal(); }
-    }
+  @include breakpoint-larger($breakpoint-lg) {
+    .form__group--lg-horizontal & { @include form__control--horizontal(); }
+  }
 
-    @include breakpoint-larger($breakpoint-xl) {
-      .form__group--xl-horizontal & { @include form__control--horizontal(); }
-    }
+  @include breakpoint-larger($breakpoint-xl) {
+    .form__group--xl-horizontal & { @include form__control--horizontal(); }
   }
 }
 
@@ -209,8 +196,6 @@ select.form__control {
 
 // Fix for input type search
 [type="search"] {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
